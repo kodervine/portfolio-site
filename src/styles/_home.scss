@@ -1,0 +1,11 @@
+.home-container {
+  display: flex;
+  background: linear-gradient(
+    to bottom,
+    #f7f7f9,
+    rgba(255, 255, 255, 1),
+    white
+  );
+  height: 100vh;
+  color: $dark-text-color;
+}
