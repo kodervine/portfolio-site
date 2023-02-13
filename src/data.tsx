@@ -26,16 +26,16 @@ export const iconData: IconItem[] = [
     icon: <MdOutlineMarkEmailUnread />,
     link: "mailto:anikwenzekelly@gmail.com",
   },
-  {
-    icon: <FaGithubSquare />,
-    link: "https://github.com/kodervine",
-  },
+ 
   {
     icon: <AiFillLinkedin />,
     link: "https://www.linkedin.com/in/chinenye-anikwenze/",
   },
   {
     icon: <AiFillTwitterSquare />,
+    link: "https://github.com/kodervine",
+  }, {
+    icon: <FaGithubSquare />,
     link: "https://github.com/kodervine",
   },
 ];
