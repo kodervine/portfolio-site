@@ -1,4 +1,6 @@
 import React from "react";
+import { nanoid } from "nanoid";
+import { profileListItems } from "./../data";
 
 interface Props {
   name: string;

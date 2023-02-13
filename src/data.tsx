@@ -4,11 +4,10 @@ interface Link {
 }
 
 const profileListItems: Link[] = [
-  { text: "OFFER", link: "#offer" },
-  { text: "PORTFOLIO", link: "#portfolio" },
-  { text: "CONTACT ME", link: "#contact" },
+  { text: "About Me", link: "#offer" },
+  { text: "Portfolio", link: "#portfolio" },
+  { text: "Contact Me", link: "#contact" },
   { text: "CV", link: "#cv" },
-  { text: "PRESENTATIONS", link: "#presentations" },
   { text: "PERSONAL BLOG", link: "#blog" },
 ];
 
