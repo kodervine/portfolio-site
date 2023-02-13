@@ -1,9 +1,14 @@
+import React from "react";
+import { MdOutlineMarkEmailUnread } from "react-icons/md";
+import { AiFillLinkedin, AiFillTwitterSquare } from "react-icons/ai";
+import { FaGithubSquare } from "react-icons/fa";
+
 interface Link {
   text: string;
   link: string;
 }
 
-const profileListItems: Link[] = [
+export const profileListItems: Link[] = [
   { text: "About Me", link: "#offer" },
   { text: "Portfolio", link: "#portfolio" },
   { text: "Contact Me", link: "#contact" },
@@ -11,4 +16,26 @@ const profileListItems: Link[] = [
   { text: "PERSONAL BLOG", link: "#blog" },
 ];
 
-export { profileListItems };
+interface IconItem {
+  icon: React.ReactElement;
+  link: string;
+}
+
+export const iconData: IconItem[] = [
+  {
+    icon: <MdOutlineMarkEmailUnread />,
+    link: "/home",
+  },
+  {
+    icon: <FaGithubSquare />,
+    link: "/about",
+  },
+  {
+    icon: <AiFillLinkedin />,
+    link: "/about",
+  },
+  {
+    icon: <AiFillTwitterSquare />,
+    link: "/about",
+  },
+];

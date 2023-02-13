@@ -1,9 +1,16 @@
 import React from "react";
 import { nanoid } from "nanoid";
+import profilePicture from "../assets/profile-pic.jpg";
 import { profileListItems } from "./../data";
+import { iconData } from "./../data";
 
 interface ListItem {
   text: string;
+  link: string;
+}
+
+interface IconItem {
+  icon: React.ReactElement;
   link: string;
 }
 
@@ -15,6 +22,7 @@ interface Props {
 const Sidebar: React.FC<Props> = ({ name, title }) => {
   return (
     <aside className="sidebar-container">
+      <img src={profilePicture} alt="User profile picture" />
       <h1>{name}</h1>
       <h2>{title}</h2>
       <nav>
@@ -29,10 +37,16 @@ const Sidebar: React.FC<Props> = ({ name, title }) => {
           })}
         </ul>
       </nav>
-      <p>
-        GET IN TOUCH
-        <br />I am available for hire and open to any ideas of cooperation.
-      </p>
+      <ul className="sidebar-icons">
+        {iconData.map((icons: IconItem) => {
+          const { icon, link } = icons;
+          return (
+            <li key={nanoid()}>
+              <a href={link}>{icon}</a>
+            </li>
+          );
+        })}
+      </ul>
     </aside>
   );
 };
