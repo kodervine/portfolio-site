@@ -24,18 +24,18 @@ interface IconItem {
 export const iconData: IconItem[] = [
   {
     icon: <MdOutlineMarkEmailUnread />,
-    link: "/home",
+    link: "mailto:anikwenzekelly@gmail.com",
   },
   {
     icon: <FaGithubSquare />,
-    link: "/about",
+    link: "https://github.com/kodervine",
   },
   {
     icon: <AiFillLinkedin />,
-    link: "/about",
+    link: "https://www.linkedin.com/in/chinenye-anikwenze/",
   },
   {
     icon: <AiFillTwitterSquare />,
-    link: "/about",
+    link: "https://github.com/kodervine",
   },
 ];

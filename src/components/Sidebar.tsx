@@ -23,8 +23,12 @@ const Sidebar: React.FC<Props> = ({ name, title }) => {
   return (
     <aside className="sidebar-container">
       <img src={profilePicture} alt="User profile picture" />
-      <h1>{name}</h1>
-      <h2>{title}</h2>
+      <div>
+        {" "}
+        <h3>{name}</h3>
+        <p>{title}</p>
+      </div>
+
       <nav>
         <ul>
           {profileListItems.map((listitems: ListItem) => {
@@ -37,6 +41,7 @@ const Sidebar: React.FC<Props> = ({ name, title }) => {
           })}
         </ul>
       </nav>
+      <h5>GET IN TOUCH</h5>
       <ul className="sidebar-icons">
         {iconData.map((icons: IconItem) => {
           const { icon, link } = icons;
