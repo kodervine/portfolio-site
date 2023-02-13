@@ -2,6 +2,11 @@ import React from "react";
 import { nanoid } from "nanoid";
 import { profileListItems } from "./../data";
 
+interface ListItem {
+  text: string;
+  link: string;
+}
+
 interface Props {
   name: string;
   title: string;
@@ -14,21 +19,14 @@ const Sidebar: React.FC<Props> = ({ name, title }) => {
       <h2>{title}</h2>
       <nav>
         <ul>
-          <li>
-            <a href="#offer">About Me</a>
-          </li>
-          <li>
-            <a href="#portfolio">Portfolio</a>
-          </li>
-          <li>
-            <a href="#contact">Contact Me</a>
-          </li>
-          <li>
-            <a href="#cv">CV</a>
-          </li>
-          <li>
-            <a href="#blog">Blog</a>
-          </li>
+          {profileListItems.map((listitems: ListItem) => {
+            const { text, link } = listitems;
+            return (
+              <li key={nanoid()}>
+                <a href={link}>{text}</a>
+              </li>
+            );
+          })}
         </ul>
       </nav>
       <p>
