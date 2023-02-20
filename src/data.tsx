@@ -1,44 +1,58 @@
 import React from "react";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
-import { AiFillLinkedin, AiFillTwitterSquare } from "react-icons/ai";
+import {
+  AiFillLinkedin,
+  AiFillGithub,
+  AiOutlineTwitter,
+  AiOutlineMedium,
+} from "react-icons/ai";
 import { FaGithubSquare } from "react-icons/fa";
+import { SiHashnode } from "react-icons/si";
 
-interface Link {
+export interface ListItem {
   text: string;
   link: string;
 }
 
-export const profileListItems: Link[] = [
-  { text: "About Me", link: "#offer" },
+export const profileListItems: ListItem[] = [
+  { text: "About", link: "#offer" },
   { text: "Portfolio", link: "#portfolio" },
-  { text: "Contact Me", link: "#contact" },
+  { text: "Certifications", link: "#contact" },
   { text: "CV", link: "#cv" },
   { text: "Blog", link: "#blog" },
   { text: "Publications", link: "#blog" },
 ];
 
-interface IconItem {
+export interface IconItem {
   icon: React.ReactElement;
   link: string;
 }
 
 export const iconData: IconItem[] = [
   {
-    icon: <MdOutlineMarkEmailUnread />,
-    link: "mailto:anikwenzekelly@gmail.com",
+    icon: <AiFillGithub />,
+    link: "https://github.com/kodervine",
   },
-
   {
     icon: <AiFillLinkedin />,
     link: "https://www.linkedin.com/in/chinenye-anikwenze/",
   },
   {
-    icon: <AiFillTwitterSquare />,
-    link: "https://github.com/kodervine",
+    icon: <MdOutlineMarkEmailUnread />,
+    link: "mailto:anikwenzekelly@gmail.com",
   },
   {
-    icon: <FaGithubSquare />,
-    link: "https://github.com/kodervine",
+    icon: <SiHashnode />,
+    link: "https://hashnode.com/@kodervine",
+  },
+  {
+    icon: <AiOutlineMedium />,
+    link: "https://kodervine.medium.com/",
+  },
+
+  {
+    icon: <AiOutlineTwitter />,
+    link: "https://twitter.com/kodervine",
   },
 ];
 

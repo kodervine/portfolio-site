@@ -1,4 +1,12 @@
-import { createStyles, Container, Group, ActionIcon } from "@mantine/core";
+import {
+  createStyles,
+  Container,
+  Group,
+  ActionIcon,
+  Anchor,
+} from "@mantine/core";
+import { IconItem, iconData } from "./../data";
+import { nanoid } from "nanoid";
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -34,9 +42,14 @@ const Footer = () => {
     <div className={classes.footer}>
       <Container className={classes.inner}>
         <Group spacing={0} className={classes.links} position="right" noWrap>
-          <ActionIcon size="lg">Icon</ActionIcon>
-          <ActionIcon size="lg">Icon</ActionIcon>
-          <ActionIcon size="lg">Icon</ActionIcon>
+          {iconData.map((icons: IconItem) => {
+            const { icon, link } = icons;
+            return (
+              <ActionIcon key={nanoid()} size="lg">
+                <Anchor href={link}>{icon}</Anchor>
+              </ActionIcon>
+            );
+          })}
         </Group>
       </Container>
     </div>
