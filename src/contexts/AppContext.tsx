@@ -1,11 +1,11 @@
 import { FC, createContext, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
-interface AppContextType {
+interface AppContextProps {
   handleNavigate: (navigate: string) => void;
 }
 
-const AppContext = createContext<AppContextType | undefined>(undefined);
+const AppContext = createContext<AppContextProps | undefined>(undefined);
 
 const AppProvider: FC = ({ children }) => {
   const navigateTo = useNavigate();
@@ -21,9 +21,7 @@ const AppProvider: FC = ({ children }) => {
 };
 
 export const useGlobalContext = () => {
-  const context = useContext(AppContext);
-  if (!context) {
-    throw new Error("useGlobalContext must be used within an AppProvider");
-  }
-  return context;
+  return useContext(AppContext);
 };
+
+export { AppProvider, AppContext };
