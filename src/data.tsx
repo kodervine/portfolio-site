@@ -13,7 +13,8 @@ export const profileListItems: Link[] = [
   { text: "Portfolio", link: "#portfolio" },
   { text: "Contact Me", link: "#contact" },
   { text: "CV", link: "#cv" },
-  { text: "PERSONAL BLOG", link: "#blog" },
+  { text: "Blog", link: "#blog" },
+  { text: "Publications", link: "#blog" },
 ];
 
 interface IconItem {
@@ -26,7 +27,7 @@ export const iconData: IconItem[] = [
     icon: <MdOutlineMarkEmailUnread />,
     link: "mailto:anikwenzekelly@gmail.com",
   },
- 
+
   {
     icon: <AiFillLinkedin />,
     link: "https://www.linkedin.com/in/chinenye-anikwenze/",
@@ -34,8 +35,27 @@ export const iconData: IconItem[] = [
   {
     icon: <AiFillTwitterSquare />,
     link: "https://github.com/kodervine",
-  }, {
+  },
+  {
     icon: <FaGithubSquare />,
     link: "https://github.com/kodervine",
+  },
+];
+
+export interface PortfolioInterface {
+  title: string;
+  description1: string;
+  descriptionItems: string;
+  moreDetailsLink: string;
+  technologiesUsed: string[];
+}
+
+export const portfolioData: PortfolioInterface[] = [
+  {
+    title: "Ceendit",
+    description1: "",
+    descriptionItems: "",
+    moreDetailsLink: "",
+    technologiesUsed: ["React", "Chakra UI"],
   },
 ];
