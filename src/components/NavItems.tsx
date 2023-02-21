@@ -2,10 +2,10 @@ import React from "react";
 import { Navbar, Image, Box, Text, Anchor, Flex } from "@mantine/core";
 import profileImg from "../assets/profile-pic.jpg";
 import { nanoid } from "nanoid";
-import { ListItem, profileListItems } from "./../data";
+import { ListItem, profileListItems } from "../data";
 import Footer from "./Footer";
 
-const Nav: React.FC = () => {
+const NavItems: React.FC = () => {
   return (
     <Navbar display="flex">
       <Flex>
@@ -27,4 +27,4 @@ const Nav: React.FC = () => {
   );
 };
 
-export default Nav;
+export default NavItems;

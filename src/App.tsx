@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import { Flex, Text } from "@mantine/core";
-import { AiOutlineMenuFold } from "react-icons/ai";
-import Nav from "./components/Nav";
+import { Flex, Text, Transition } from "@mantine/core";
+import { AiOutlineMenuFold, AiOutlineCloseCircle } from "react-icons/ai";
+import NavItems from "./components/NavItems";
 import Home from "./pages/Home";
 import PortfolioPage from "./pages/PortfolioPage";
 
-function App() {
+function App({ opened }) {
   const [toggleNav, setToggleNav] = useState(false);
   const handleToggleNav = (): void => {
     return setToggleNav(!toggleNav);
@@ -15,9 +15,24 @@ function App() {
     <>
       <Flex justify="space-between" align="center">
         <Text>CHINENYE ANIKWENZE</Text>
-        <AiOutlineMenuFold onClick={handleToggleNav} />
+        {toggleNav ? (
+          <Flex onClick={handleToggleNav} align="center" gap="2px">
+            <AiOutlineCloseCircle />
+            hide
+          </Flex>
+        ) : (
+          <AiOutlineMenuFold onClick={handleToggleNav} />
+        )}
       </Flex>
-      {toggleNav && <Nav />}
+      <Transition
+        mounted={opened}
+        transition="fade"
+        duration={400}
+        timingFunction="ease"
+      >
+        {(styles) => <div style={styles}>Your modal</div>}
+      </Transition>
+      {toggleNav && <NavItems />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
