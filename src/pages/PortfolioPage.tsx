@@ -35,7 +35,7 @@ const useStyles = createStyles((theme) => ({
     transition: "transform 150ms ease",
 
     "&[data-active]": {
-      transform: "scale(1.02)",
+      transform: "scale(1.0002)",
       backgroundColor:
         theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
       boxShadow: theme.shadows.md,
@@ -84,7 +84,7 @@ const PortfolioPage: FC = () => {
           <Accordion.Item value={item.title} key={item.title}>
             <Accordion.Control>{item.title}</Accordion.Control>
             <Accordion.Panel>
-              <Grid>
+              <Grid justify="flex-start" align="center">
                 {/* Image grid */}
                 <Grid.Col md={6} lg={5}>
                   <Grid>
@@ -110,6 +110,7 @@ const PortfolioPage: FC = () => {
                 </Grid.Col>
                 {/* portfolio text grid */}
                 <Grid.Col md={6} lg={5}>
+                  <Flex></Flex>
                   <Text size="14px">{item.description}</Text>
 
                   <Box>
