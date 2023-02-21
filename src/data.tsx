@@ -10,6 +10,7 @@ import { SiHashnode } from "react-icons/si";
 import ceenditLaptopImg from "./assets/ceendit-laptop.png";
 import ceenditPhoneImg from "./assets/ceendit-phone.png";
 import dailyTaskLaptopImg from "./assets/daily-task-laptop.png";
+import dailyTaskWatchImg from "./assets/daily-task-watch.png";
 import kaddIpadImg from "./assets/kadd-ipad.png";
 import kaddPhoneImg from "./assets/kadd-phone.png";
 import prytoIpadImg from "./assets/pryto-ipad.png";
@@ -119,5 +120,6 @@ export const portfolioData: PortfolioInterface[] = [
     githubLink: "https://github.com/kodervine/my-daily-task",
     technologiesUsed: ["Javascript", "HTML", "Bootstrap"],
     image1: dailyTaskLaptopImg,
+    image2: dailyTaskWatchImg,
   },
 ];
