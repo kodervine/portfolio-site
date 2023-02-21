@@ -37,7 +37,8 @@ const useStyles = createStyles((theme) => ({
   },
 
   anchor: {
-    color: theme.colorScheme === "dark" ? theme.colors.gray[4] : "dark",
+    color:
+      theme.colorScheme === "dark" ? theme.colors.gray[4] : theme.colors.dark,
   },
 }));
 
