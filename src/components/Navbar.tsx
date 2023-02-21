@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Button, Collapse, Flex, Text } from "@mantine/core";
 
@@ -18,7 +18,9 @@ const Navbar = (props: Props) => {
         align="center"
         onClick={() => setOpened((o) => !o)}
       >
-        <Text>CHINENYE ANIKWENZE</Text>
+        <Text>
+          <Link to="/">CHINENYE ANIKWENZE</Link>
+        </Text>
 
         <AiOutlineMenuFold />
       </Flex>

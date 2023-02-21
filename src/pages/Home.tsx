@@ -2,6 +2,7 @@ import React from "react";
 import profileImg from "../assets/profile-pic.jpg";
 import Footer from "../components/Footer";
 import { Anchor, Badge, Grid, Image, Text, Title } from "@mantine/core";
+import HireMe from "../components/HireMe";
 
 interface Props {
   techStack: string[];
@@ -46,22 +47,7 @@ const Home = () => {
               </Badge>
             );
           })}
-          <Title order={6} mt={10}>
-            Hire me:{" "}
-          </Title>
-          <Badge color="orange" size="sm" variant="dot" mr="10px">
-            <Anchor
-              href="https://drive.google.com/drive/folders/1mtB7QT5DY_l9n7blL6txMKN9G5mg4Iw_"
-              target="_blank"
-            >
-              View my CV
-            </Anchor>
-          </Badge>
-          <Badge color="green" size="sm" variant="dot" mr="10px">
-            <Anchor href="mailto:anikwenzekelly@gmail.com" target="_blank">
-              Email me
-            </Anchor>
-          </Badge>
+          <HireMe />
           <Footer />
         </main>
       </Grid.Col>

@@ -33,7 +33,9 @@ const NavItems: React.FC = () => {
         const { text, link } = listitems;
         return (
           <Text key={nanoid()}>
-            <Link to={link}>{text}</Link>
+            <Link to={link}>
+              <Anchor color="dark">{text}</Anchor>
+            </Link>
           </Text>
         );
       })}
