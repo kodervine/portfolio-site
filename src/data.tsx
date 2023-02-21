@@ -7,6 +7,13 @@ import {
   AiOutlineMedium,
 } from "react-icons/ai";
 import { SiHashnode } from "react-icons/si";
+import ceenditLaptopImg from "./assets/ceendit-laptop.png";
+import ceenditPhoneImg from "./assets/ceendit-phone.png";
+import dailyTaskLaptopImg from "./assets/daily-task-laptop.png";
+import kaddIpadImg from "./assets/kadd-ipad.png";
+import kaddPhoneImg from "./assets/kadd-phone.png";
+import prytoIpadImg from "./assets/pryto-ipad.png";
+import prytoPhoneImg from "./assets/pryto-phone.png";
 
 export interface ListItem {
   text: string;
@@ -65,6 +72,8 @@ export interface PortfolioInterface {
   technologiesUsed: string[];
   githubIcon: React.ReactElement;
   githubLink: string;
+  image1?: string;
+  image2?: string;
 }
 
 export const portfolioData: PortfolioInterface[] = [
@@ -76,6 +85,8 @@ export const portfolioData: PortfolioInterface[] = [
     githubIcon: <AiFillGithub />,
     githubLink: "https://github.com/kodervine/ceendit-react",
     technologiesUsed: ["React", "Javascript", "Chakra UI", "Firebase"],
+    image1: ceenditLaptopImg,
+    image2: ceenditPhoneImg,
   },
   {
     title: "Pryto - live crypto currency converter",
@@ -85,6 +96,8 @@ export const portfolioData: PortfolioInterface[] = [
     githubIcon: <AiFillGithub />,
     githubLink: "https://github.com/kodervine/pryto",
     technologiesUsed: ["Javascript", "Tailwind", "Coingecko API"],
+    image1: prytoIpadImg,
+    image2: prytoPhoneImg,
   },
   {
     title: "Kadd - customizable business card creator",
@@ -94,6 +107,8 @@ export const portfolioData: PortfolioInterface[] = [
     githubIcon: <AiFillGithub />,
     githubLink: "https://github.com/kodervine/kadd-business-card-creator",
     technologiesUsed: ["Javascript", "CSS", "HTML"],
+    image1: kaddPhoneImg,
+    image2: kaddIpadImg,
   },
   {
     title: "My Tasks - daily schedule tools",
@@ -103,5 +118,6 @@ export const portfolioData: PortfolioInterface[] = [
     githubIcon: <AiFillGithub />,
     githubLink: "https://github.com/kodervine/my-daily-task",
     technologiesUsed: ["Javascript", "HTML", "Bootstrap"],
+    image1: dailyTaskLaptopImg,
   },
 ];

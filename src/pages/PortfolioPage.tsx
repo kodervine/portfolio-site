@@ -8,6 +8,8 @@ import {
   Box,
   Button,
   createStyles,
+  Flex,
+  Image,
   Text,
 } from "@mantine/core";
 import { AiOutlinePlus } from "react-icons/ai";
@@ -50,6 +52,11 @@ const useStyles = createStyles((theme) => ({
       transform: "rotate(-90deg)",
     },
   },
+
+  imageClass: {
+    width: "80px",
+    height: "100px",
+  },
 }));
 
 const PortfolioPage: FC = () => {
@@ -76,33 +83,56 @@ const PortfolioPage: FC = () => {
           <Accordion.Item value={item.title} key={item.title}>
             <Accordion.Control>{item.title}</Accordion.Control>
             <Accordion.Panel>
-              <Text size="14px">{item.description}</Text>
+              <Flex direction={innerWidth < 700 ? "column-reverse" : "row"}>
+                <Box>
+                  <Text size="14px">{item.description}</Text>
 
-              <Box>
-                <Anchor href={item.link} target="_blank">
-                  More details
-                </Anchor>
-              </Box>
+                  <Box>
+                    <Anchor href={item.githubLink} target="_blank">
+                      More details
+                    </Anchor>
+                  </Box>
 
-              <Box>
-                <Text weight="bold" size="14px">
-                  Technologies used:
-                </Text>
+                  <Box>
+                    <Text weight="bold" size="14px">
+                      Technologies used:
+                    </Text>
 
-                {item.technologiesUsed.map((btn, index) => {
-                  return (
-                    <Badge
-                      color="orange"
-                      size="sm"
-                      variant="dot"
-                      key={index}
-                      mr="10px"
-                    >
-                      {btn}
-                    </Badge>
-                  );
-                })}
-              </Box>
+                    {item.technologiesUsed.map((btn, index) => {
+                      return (
+                        <Badge
+                          color="orange"
+                          size="sm"
+                          variant="dot"
+                          key={index}
+                          mr="10px"
+                        >
+                          {btn}
+                        </Badge>
+                      );
+                    })}
+                  </Box>
+                </Box>
+
+                <Flex
+                  direction={innerWidth < 700 ? "column-reverse" : "row"}
+                  justify="center"
+                  align="center"
+                >
+                  <Image
+                    src={item.image1}
+                    width={387}
+                    height={290}
+                    fit="contain"
+                  />
+                  <Image
+                    src={item.image2}
+                    width={387}
+                    height={290}
+                    fit="contain"
+                  />
+                </Flex>
+              </Flex>
             </Accordion.Panel>
           </Accordion.Item>
         ))}
