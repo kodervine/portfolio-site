@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Button, Collapse, Flex, Text } from "@mantine/core";
+import { Button, Box, Collapse, Flex, Text } from "@mantine/core";
 
 import { AiOutlineMenuFold, AiOutlineCloseCircle } from "react-icons/ai";
 
@@ -13,25 +13,27 @@ const Navbar = (props: Props) => {
 
   return (
     <>
-      <Flex
-        justify="space-between"
-        align="center"
-        onClick={() => setOpened((o) => !o)}
-      >
-        <Text>
-          <Link to="/">CHINENYE ANIKWENZE</Link>
-        </Text>
+      <Box>
+        <Flex
+          justify="space-between"
+          align="center"
+          onClick={() => setOpened((o) => !o)}
+        >
+          <Text>
+            <Link to="/">CHINENYE ANIKWENZE</Link>
+          </Text>
 
-        <AiOutlineMenuFold />
-      </Flex>
+          <AiOutlineMenuFold />
+        </Flex>
 
-      <Collapse
-        in={opened}
-        transitionDuration={1000}
-        transitionTimingFunction="linear"
-      >
-        <NavItems />
-      </Collapse>
+        <Collapse
+          in={opened}
+          transitionDuration={1000}
+          transitionTimingFunction="linear"
+        >
+          <NavItems />
+        </Collapse>
+      </Box>
     </>
   );
 };

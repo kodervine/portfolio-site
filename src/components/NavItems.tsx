@@ -19,6 +19,13 @@ const useStyles = createStyles((theme) => ({
     height: "100vh",
     overflow: "hidden",
   },
+
+  anchor: {
+    color:
+      theme.colorScheme === "dark"
+        ? theme.colors.gray[4]
+        : theme.colors.gray[8],
+  },
 }));
 const NavItems: React.FC = () => {
   const { classes } = useStyles();
@@ -26,16 +33,16 @@ const NavItems: React.FC = () => {
   return (
     <Navbar display="flex" className={classes.nav}>
       <Flex>
-        <Image src={profileImg} radius="lg" width="50px" height="50px" />
+        <Image src={profileImg} radius="50%" width="50px" height="50px" />
       </Flex>
 
       {profileListItems.map((listitems: ListItem) => {
         const { text, link } = listitems;
         return (
-          <Text key={nanoid()}>
-            <Link to={link}>
-              <Anchor color="dark">{text}</Anchor>
-            </Link>
+          <Text key={nanoid()} my={4} size={16}>
+            <Anchor className={classes.anchor}>
+              <Link to={link}>{text}</Link>
+            </Anchor>
           </Text>
         );
       })}

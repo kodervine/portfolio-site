@@ -6,6 +6,7 @@ import HireMe from "../components/HireMe";
 
 interface Props {
   techStack: string[];
+  techTools: string[];
 }
 
 const techStack = [
@@ -19,25 +20,32 @@ const techStack = [
   "html",
 ];
 
+const techTools = [
+  "git",
+  "github",
+  "chakra ui",
+  "mantine ui",
+  "netlify",
+  "firebase",
+];
+
 const Home = () => {
   return (
     <Grid align="center" justify="center">
       <Grid.Col md={6} lg={5} order={2} orderSm={2} orderLg={1}>
         {" "}
         <main>
-          <Title order={4}>Hiiii! I am...</Title>
-          <Title order={1} weight={900}>
+          <Title order={4}>Hiiii! My name is</Title>
+          <Title order={1} weight={900} my="sm">
             CHINENYE ANIKWENZE
           </Title>
           <Text align="justify">
             I am a resourceful and detail-oriented Frontend Developer proficient
-            in HTML, CSS, JavaScript and popular frameworks such as React. I
-            love creating visually stunning and user-friendly websites that
-            engage and ease users experience. I'm constantly learning new
-            technologies to stay up-to-date with the industry standards and
-            trends. Available for remote or on-site internship
+            in HTML, CSS, JavaScript and React. I love creating visually
+            stunning and user-friendly websites that engage and ease users
+            experience. Available for remote or on-site internship
           </Text>
-          <Title order={6} mt={10}>
+          <Title order={6} my="sm">
             Tech Stack:{" "}
           </Title>
           {techStack.map((stack) => {
@@ -47,7 +55,19 @@ const Home = () => {
               </Badge>
             );
           })}
+
+          <Title order={6} my="sm">
+            Tools:
+          </Title>
+          {techTools.map((tool) => {
+            return (
+              <Badge color="lime" size="sm" radius="sm" variant="dot" mr="10px">
+                {tool}
+              </Badge>
+            );
+          })}
           <HireMe />
+
           <Footer />
         </main>
       </Grid.Col>
