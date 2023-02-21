@@ -9,6 +9,7 @@ import {
   Button,
   createStyles,
   Flex,
+  Grid,
   Image,
   Text,
 } from "@mantine/core";
@@ -64,30 +65,51 @@ const PortfolioPage: FC = () => {
   return (
     <div>
       <h1>Portfolio</h1>
-
-      {portfolioData.map((item: PortfolioInterface) => (
-        <Accordion
-          chevron={<AiOutlinePlus size={16} />}
-          styles={{
-            chevron: {
-              "&[data-rotate]": {
-                transform: "rotate(45deg)",
-              },
+      <Accordion
+        chevron={<AiOutlinePlus size={16} />}
+        styles={{
+          chevron: {
+            "&[data-rotate]": {
+              transform: "rotate(45deg)",
             },
-          }}
-          mx="10px"
-          variant="filled"
-          classNames={classes}
-          className={classes.root}
-          defaultValue="Ceendit -  an invoice generator"
-        >
+          },
+        }}
+        mx="10px"
+        variant="filled"
+        classNames={classes}
+        className={classes.root}
+        defaultValue="Ceendit -  an invoice generator"
+      >
+        {portfolioData.map((item: PortfolioInterface) => (
           <Accordion.Item value={item.title} key={item.title}>
             <Accordion.Control>{item.title}</Accordion.Control>
             <Accordion.Panel>
-              <Flex
-                direction={innerWidth < 700 ? "column-reverse" : "row-reverse"}
-              >
-                <Box>
+              <Grid>
+                {/* Image grid */}
+                <Grid.Col md={6} lg={5}>
+                  <Grid>
+                    <Grid.Col md={6} lg={5}>
+                      {" "}
+                      <Image
+                        src={item.image1}
+                        width={387}
+                        height={290}
+                        fit="contain"
+                      />
+                    </Grid.Col>
+                    <Grid.Col md={6} lg={2}>
+                      {" "}
+                      <Image
+                        src={item.image2}
+                        width={387}
+                        height={290}
+                        fit="contain"
+                      />
+                    </Grid.Col>
+                  </Grid>
+                </Grid.Col>
+                {/* portfolio text grid */}
+                <Grid.Col md={6} lg={5}>
                   <Text size="14px">{item.description}</Text>
 
                   <Box>
@@ -115,31 +137,12 @@ const PortfolioPage: FC = () => {
                       );
                     })}
                   </Box>
-                </Box>
-
-                <Flex
-                  direction={innerWidth < 700 ? "column-reverse" : "row"}
-                  justify="center"
-                  align="center"
-                >
-                  <Image
-                    src={item.image1}
-                    width={387}
-                    height={290}
-                    fit="contain"
-                  />
-                  <Image
-                    src={item.image2}
-                    width={387}
-                    height={290}
-                    fit="contain"
-                  />
-                </Flex>
-              </Flex>
+                </Grid.Col>
+              </Grid>
             </Accordion.Panel>
           </Accordion.Item>
-        </Accordion>
-      ))}
+        ))}
+      </Accordion>
     </div>
   );
 };
