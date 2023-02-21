@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Navbar,
   Image,
@@ -32,9 +33,7 @@ const NavItems: React.FC = () => {
         const { text, link } = listitems;
         return (
           <Text key={nanoid()}>
-            <Anchor href={link} color="black">
-              {text}
-            </Anchor>
+            <Link to={link}>{text}</Link>
           </Text>
         );
       })}

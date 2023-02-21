@@ -22,15 +22,15 @@ export interface ListItem {
 }
 
 export const profileListItems: ListItem[] = [
-  { text: "About", link: "#offer" },
+  { text: "About", link: "/about" },
   { text: "Portfolio", link: "/portfolio" },
-  { text: "Certifications", link: "/certificatio" },
+  { text: "Certifications", link: "/certifications" },
   {
     text: "CV",
     link: "https://drive.google.com/drive/folders/1mtB7QT5DY_l9n7blL6txMKN9G5mg4Iw_",
   },
   { text: "Blog", link: "https://kodervine.hashnode.dev/" },
-  { text: "Publications", link: "#blog" },
+  { text: "Publications", link: "/publications" },
 ];
 
 export interface IconItem {
