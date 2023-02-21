@@ -14,6 +14,7 @@ import {
   Text,
 } from "@mantine/core";
 import { AiOutlinePlus } from "react-icons/ai";
+import Footer from "../components/Footer";
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -111,7 +112,7 @@ const PortfolioPage: FC = () => {
                 {/* portfolio text grid */}
                 <Grid.Col md={6} lg={5}>
                   <Flex></Flex>
-                  <Text size="14px">{item.description}</Text>
+                  <Text>{item.description}</Text>
 
                   <Box>
                     <Anchor href={item.githubLink} target="_blank">
@@ -120,9 +121,7 @@ const PortfolioPage: FC = () => {
                   </Box>
 
                   <Box>
-                    <Text weight="bold" size="14px">
-                      Technologies used:
-                    </Text>
+                    <Text weight="bold">Technologies used:</Text>
 
                     {item.technologiesUsed.map((btn, index) => {
                       return (
@@ -144,6 +143,7 @@ const PortfolioPage: FC = () => {
           </Accordion.Item>
         ))}
       </Accordion>
+      <Footer />
     </div>
   );
 };

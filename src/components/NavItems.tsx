@@ -32,7 +32,7 @@ const NavItems: React.FC = () => {
         const { text, link } = listitems;
         return (
           <Text key={nanoid()}>
-            <Anchor href={link} target="_blank" color="black">
+            <Anchor href={link} color="black">
               {text}
             </Anchor>
           </Text>

@@ -36,33 +36,40 @@ export const profileListItems: ListItem[] = [
 export interface IconItem {
   icon: React.ReactElement;
   link: string;
+  text: string;
 }
 
 export const iconData: IconItem[] = [
   {
     icon: <AiFillGithub />,
     link: "https://github.com/kodervine",
+    text: "Github",
   },
   {
     icon: <AiFillLinkedin />,
     link: "https://www.linkedin.com/in/chinenye-anikwenze/",
+    text: "Linkedin",
   },
   {
     icon: <MdOutlineMarkEmailUnread />,
     link: "mailto:anikwenzekelly@gmail.com",
+    text: "Email",
   },
   {
     icon: <SiHashnode />,
     link: "https://hashnode.com/@kodervine",
+    text: "Hashnode",
   },
   {
     icon: <AiOutlineMedium />,
     link: "https://kodervine.medium.com/",
+    text: "Medium",
   },
 
   {
     icon: <AiOutlineTwitter />,
     link: "https://twitter.com/kodervine",
+    text: "Twitter",
   },
 ];
 

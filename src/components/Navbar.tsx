@@ -21,19 +21,8 @@ const Navbar = (props: Props) => {
         onClick={() => setOpened((o) => !o)}
       >
         <Text>CHINENYE ANIKWENZE</Text>
-        {toggleNav ? (
-          <Flex
-            onClick={handleToggleNav}
-            align="center"
-            gap="2px"
-            style={{ cursor: "pointer" }}
-          >
-            <AiOutlineCloseCircle />
-            hide
-          </Flex>
-        ) : (
-          <AiOutlineMenuFold onClick={handleToggleNav} />
-        )}
+
+        <AiOutlineMenuFold />
       </Flex>
 
       <Collapse
@@ -41,7 +30,7 @@ const Navbar = (props: Props) => {
         transitionDuration={1000}
         transitionTimingFunction="linear"
       >
-        {toggleNav && <NavItems />}
+        <NavItems />
       </Collapse>
     </>
   );

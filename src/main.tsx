@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         <MantineProvider
           theme={{
             fontFamily: "Spectral, serif",
-            colorScheme: "dark",
+            // colorScheme: "dark",
             colors: {
               // override dark colors to change them for all components
               dark: [
@@ -35,6 +35,13 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
               md: 1000,
               lg: 1200,
               xl: 1400,
+            },
+            fontSizes: {
+              xs: 10,
+              sm: 12,
+              md: 14,
+              lg: 16,
+              xl: 20,
             },
           }}
           withGlobalStyles

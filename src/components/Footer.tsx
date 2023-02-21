@@ -4,13 +4,15 @@ import {
   Group,
   ActionIcon,
   Anchor,
+  Text,
+  Tooltip,
 } from "@mantine/core";
 import { IconItem, iconData } from "./../data";
 import { nanoid } from "nanoid";
 
 const useStyles = createStyles((theme) => ({
   footer: {
-    marginTop: 120,
+    marginTop: 20,
     borderTop: `1px solid ${
       theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[2]
     }`,
@@ -33,26 +35,35 @@ const useStyles = createStyles((theme) => ({
       marginTop: theme.spacing.md,
     },
   },
+
+  anchor: {
+    color: theme.colorScheme === "dark" ? theme.colors.gray[4] : "dark",
+  },
 }));
 
 const Footer = () => {
   const { classes } = useStyles();
+
+  const copyrightYear: number = new Date().getFullYear();
 
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
         <Group spacing={0} className={classes.links} position="right" noWrap>
           {iconData.map((icons: IconItem) => {
-            const { icon, link } = icons;
+            const { icon, link, text } = icons;
             return (
               <ActionIcon key={nanoid()} size="lg">
-                <Anchor href={link} color="red">
-                  {icon}
-                </Anchor>
+                <Tooltip label={text}>
+                  <Anchor href={link} size={20} className={classes.anchor}>
+                    {icon}
+                  </Anchor>
+                </Tooltip>
               </ActionIcon>
             );
           })}
         </Group>
+        <Text size={12}>&copy; Chinenye Anikwenze, {copyrightYear}</Text>
       </Container>
     </div>
   );
