@@ -65,25 +65,28 @@ const PortfolioPage: FC = () => {
     <div>
       <h1>Portfolio</h1>
 
-      <Accordion
-        chevron={<AiOutlinePlus size={16} />}
-        styles={{
-          chevron: {
-            "&[data-rotate]": {
-              transform: "rotate(45deg)",
+      {portfolioData.map((item: PortfolioInterface) => (
+        <Accordion
+          chevron={<AiOutlinePlus size={16} />}
+          styles={{
+            chevron: {
+              "&[data-rotate]": {
+                transform: "rotate(45deg)",
+              },
             },
-          },
-        }}
-        mx="10px"
-        variant="filled"
-        classNames={classes}
-        className={classes.root}
-      >
-        {portfolioData.map((item: PortfolioInterface) => (
+          }}
+          mx="10px"
+          variant="filled"
+          classNames={classes}
+          className={classes.root}
+          defaultValue="Ceendit -  an invoice generator"
+        >
           <Accordion.Item value={item.title} key={item.title}>
             <Accordion.Control>{item.title}</Accordion.Control>
             <Accordion.Panel>
-              <Flex direction={innerWidth < 700 ? "column-reverse" : "row"}>
+              <Flex
+                direction={innerWidth < 700 ? "column-reverse" : "row-reverse"}
+              >
                 <Box>
                   <Text size="14px">{item.description}</Text>
 
@@ -135,8 +138,8 @@ const PortfolioPage: FC = () => {
               </Flex>
             </Accordion.Panel>
           </Accordion.Item>
-        ))}
-      </Accordion>
+        </Accordion>
+      ))}
     </div>
   );
 };

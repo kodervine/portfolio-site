@@ -78,7 +78,7 @@ export interface PortfolioInterface {
 
 export const portfolioData: PortfolioInterface[] = [
   {
-    title: "Ceendit -  an invoice generator.",
+    title: "Ceendit -  an invoice generator",
     description:
       "Say goodbye to manual invoicing and hello to effortless payment processing. Create professional invoices in pdf format for your clients in less than a minute",
     link: "",
