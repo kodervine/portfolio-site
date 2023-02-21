@@ -16,7 +16,12 @@ const App: FC<{ opened: boolean }> = ({ opened }) => {
       <Flex justify="space-between" align="center">
         <Text>CHINENYE ANIKWENZE</Text>
         {toggleNav ? (
-          <Flex onClick={handleToggleNav} align="center" gap="2px">
+          <Flex
+            onClick={handleToggleNav}
+            align="center"
+            gap="2px"
+            style={{ cursor: "pointer" }}
+          >
             <AiOutlineCloseCircle />
             hide
           </Flex>
