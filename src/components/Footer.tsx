@@ -46,7 +46,7 @@ const Footer = () => {
             const { icon, link } = icons;
             return (
               <ActionIcon key={nanoid()} size="lg">
-                <Anchor href={link} theme={{ color: "teal" }}>
+                <Anchor href={link} color="red">
                   {icon}
                 </Anchor>
               </ActionIcon>
