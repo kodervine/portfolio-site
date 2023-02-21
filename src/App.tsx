@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FC, ReactNode, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Flex, Text, Transition } from "@mantine/core";
 import { AiOutlineMenuFold, AiOutlineCloseCircle } from "react-icons/ai";
@@ -6,7 +6,7 @@ import NavItems from "./components/NavItems";
 import Home from "./pages/Home";
 import PortfolioPage from "./pages/PortfolioPage";
 
-function App({ opened }) {
+const App: FC<{ opened: boolean }> = ({ opened }) => {
   const [toggleNav, setToggleNav] = useState(false);
   const handleToggleNav = (): void => {
     return setToggleNav(!toggleNav);
@@ -24,6 +24,7 @@ function App({ opened }) {
           <AiOutlineMenuFold onClick={handleToggleNav} />
         )}
       </Flex>
+
       <Transition
         mounted={opened}
         transition="fade"
@@ -32,6 +33,7 @@ function App({ opened }) {
       >
         {(styles) => <div style={styles}>Your modal</div>}
       </Transition>
+
       {toggleNav && <NavItems />}
       <Routes>
         <Route path="/" element={<Home />} />
@@ -39,6 +41,6 @@ function App({ opened }) {
       </Routes>
     </>
   );
-}
+};
 
 export default App;

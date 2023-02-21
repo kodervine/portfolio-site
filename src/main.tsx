@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           }}
           withGlobalStyles
         >
-          <App />
+          <App opened={true} />
         </MantineProvider>
       </AppProvider>
     </Router>

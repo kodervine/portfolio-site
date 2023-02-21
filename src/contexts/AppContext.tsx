@@ -1,4 +1,4 @@
-import { FC, createContext, useContext } from "react";
+import { FC, ReactNode, createContext, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface AppContextProps {
@@ -7,7 +7,7 @@ interface AppContextProps {
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
 
-const AppProvider: FC = ({ children }) => {
+const AppProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const navigateTo = useNavigate();
   const handleNavigate = (navigate: string) => {
     navigateTo(navigate);
