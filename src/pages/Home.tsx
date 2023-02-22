@@ -31,7 +31,7 @@ const techTools = [
 
 const Home = () => {
   return (
-    <Grid align="center" justify="center">
+    <Grid align="center" justify="center" my="lg">
       <Grid.Col md={6} lg={5} order={2} orderSm={2} orderLg={1}>
         {" "}
         <main>
@@ -40,10 +40,10 @@ const Home = () => {
             CHINENYE ANIKWENZE
           </Title>
           <Text align="justify">
-            I am a resourceful and detail-oriented Frontend Developer proficient
-            in HTML, CSS, JavaScript and React. I love creating visually
-            stunning and user-friendly websites that engage and ease users
-            experience. Available for remote or on-site internship
+            I am a resourceful Software Developer proficient in HTML, CSS,
+            JavaScript and React. I love creating visually stunning and
+            user-friendly websites that engage and ease users experience.
+            Available for remote or on-site internship
           </Text>
           <Title order={6} my="sm">
             Tech Stack:{" "}

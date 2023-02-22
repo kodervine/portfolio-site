@@ -15,6 +15,9 @@ import kaddIpadImg from "./assets/kadd-ipad.png";
 import kaddPhoneImg from "./assets/kadd-phone.png";
 import prytoIpadImg from "./assets/pryto-ipad.png";
 import prytoPhoneImg from "./assets/pryto-phone.png";
+import udemyJavascriptCert from "./assets/udemy-javascript-course.jpg";
+import courseraMetaReactBasics from "./assets/coursera-introduction-to-frontend.jpeg";
+import courseraMetaIntroToFrontend from "./assets/coursera-reactbasics-meta.jpeg";
 
 export interface ListItem {
   text: string;
@@ -128,5 +131,32 @@ export const portfolioData: PortfolioInterface[] = [
     technologiesUsed: ["Javascript", "HTML", "Bootstrap"],
     image1: dailyTaskLaptopImg,
     image2: dailyTaskWatchImg,
+  },
+];
+
+export const certificationsData = [
+  {
+    link: "https://www.coursera.org/account/accomplishments/verify/L4F72SP5WTT6",
+    image: courseraMetaReactBasics,
+    organisation: "Meta",
+    title: "React basics",
+    description:
+      "Organize React projects to create more scalable and maintainable websites and apps. Use props to pass data between components. Create dynamic and interactive web pages and apps.",
+  },
+  {
+    link: "https://www.coursera.org/account/accomplishments/verify/7FX52L2P3K79",
+    image: courseraMetaIntroToFrontend,
+    organisation: "Meta",
+    title: "Introduction to Frontend development",
+    description:
+      "Distinguish between front-end, back-end, and full-stack developers. Create and style a webpage with HTML and CSS. The benefits of working with UI frameworks.",
+  },
+  {
+    link: "https://www.udemy.com/certificate/UC-7e265b5b-9364-4456-af4e-5d512c7810e9/",
+    image: udemyJavascriptCert,
+    organisation: "Udemy",
+    title: "Modern Javascrpt from the beginning",
+    description:
+      "Distinguish between front-end, back-end, and full-stack developers. Create and style a webpage with HTML and CSS. The benefits of working with UI frameworks.",
   },
 ];
