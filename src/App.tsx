@@ -1,23 +1,90 @@
-import { FC, ReactNode, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { FC, useState } from "react";
+import Router from "./routes/Route";
 import Navbar from "./components/Navbar";
-import Certifications from "./pages/Certifications";
-import Publications from "./pages/Publications";
-import Home from "./pages/Home";
-import PortfolioPage from "./pages/PortfolioPage";
-import About from "./pages/About";
+import {
+  MantineProvider,
+  ColorSchemeProvider,
+  ColorScheme,
+  Box,
+  Tooltip,
+} from "@mantine/core";
+import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
 
 const App: FC<{ opened: boolean }> = ({ opened }) => {
+  const [colorScheme, setColorScheme] = useState<ColorScheme>("light");
+  const toggleColorScheme = (value?: ColorScheme) =>
+    setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
+  const dark = colorScheme === "dark";
   return (
     <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/portfolio" element={<PortfolioPage />} />
-        <Route path="/certifications" element={<Certifications />} />
-        <Route path="/publications" element={<Publications />} />
-      </Routes>
+      <ColorSchemeProvider
+        colorScheme={colorScheme}
+        toggleColorScheme={toggleColorScheme}
+      >
+        <MantineProvider
+          theme={{
+            colorScheme,
+            fontFamily: "Crete Round, serif",
+            // colorScheme: "dark",
+            colors: {
+              // override dark colors to change them for all components
+              dark: [
+                "#d5d7e0",
+                "#acaebf",
+                "#8c8fa3",
+                "#666980",
+                "#4d4f66",
+                "#34354a",
+                "#2b2c3d",
+                "#1d1e30",
+                "#0c0d21",
+                "#01010a",
+              ],
+            },
+            breakpoints: {
+              xs: 500,
+              sm: 800,
+              md: 1000,
+              lg: 1200,
+              xl: 1400,
+            },
+            fontSizes: {
+              xs: 10,
+              sm: 12,
+              md: 14,
+              lg: 16,
+              xl: 20,
+            },
+          }}
+          withGlobalStyles
+        >
+          <Navbar />
+          <Router />
+          {/* <Tooltip label={colorScheme === "dark" ? "Day mode" : "Night mode"}> */}
+          <Box
+            onClick={() => {
+              toggleColorScheme();
+            }}
+            style={{
+              position: "fixed",
+              bottom: 20,
+              right: 30,
+              cursor: "pointer",
+              border: "2px solid gray",
+              padding: "5px 5px 0px 5px",
+              borderRadius: "5px",
+            }}
+          >
+            {" "}
+            {colorScheme === "dark" ? (
+              <BsFillSunFill size={20} />
+            ) : (
+              <BsFillMoonStarsFill size={20} />
+            )}
+          </Box>{" "}
+          {/* </Tooltip> */}
+        </MantineProvider>
+      </ColorSchemeProvider>
     </>
   );
 };
