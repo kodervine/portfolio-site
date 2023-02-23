@@ -58,7 +58,7 @@ const App: FC<{ opened: boolean }> = ({ opened }) => {
         >
           <Navbar />
           <Router />
-          {/* <Tooltip label={colorScheme === "dark" ? "Day mode" : "Night mode"}> */}
+          {/* <Tooltip label={colorScheme === "dark" ? "Day mode" : "Nigt mode"}> */}
           <Box
             onClick={() => {
               toggleColorScheme();
