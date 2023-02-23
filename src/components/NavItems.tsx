@@ -25,6 +25,13 @@ const useStyles = createStyles((theme) => ({
       theme.colorScheme === "dark"
         ? theme.colors.gray[4]
         : theme.colors.gray[8],
+    textDecoration: "none",
+
+    ":hover": {
+      color: "blue",
+      boxShadow: theme.shadows.md,
+      borderRadius: theme.radius.md,
+    },
   },
 }));
 const NavItems: React.FC = ({ handleCloseNav }) => {
@@ -40,8 +47,12 @@ const NavItems: React.FC = ({ handleCloseNav }) => {
         const { text, link } = listitems;
         return (
           <Text key={nanoid()} my={4} size={16}>
-            <Anchor className={classes.anchor} onClick={handleCloseNav}>
-              <Link to={link} style={{ color: "black", opacity: "0.8" }}>
+            <Anchor onClick={handleCloseNav}>
+              <Link
+                to={link}
+                style={{ opacity: "0.8" }}
+                className={classes.anchor}
+              >
                 {text}
               </Link>
             </Anchor>
