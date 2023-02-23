@@ -113,7 +113,7 @@ export const portfolioData: PortfolioInterface[] = [
   {
     title: "Kadd - customizable business card creator",
     description:
-      "This is a customizable business card creator. Created with HTML, CSS, and Javascript.  Create a customizable business card in just a few clicks. Can change to the theme color of your choice, and save to a png file in seconds",
+      "This is a customizable business card creator. Created with HTML, CSS, and Javascript.  Create a customizable business card in just a few clicks. Can change to the theme color of your choice, and save to a png file in seconds.",
     link: "https://kadd.netlify.app/",
     githubIcon: <AiFillGithub />,
     githubLink: "https://github.com/kodervine/kadd-business-card-creator",
@@ -124,7 +124,7 @@ export const portfolioData: PortfolioInterface[] = [
   {
     title: "My Tasks - daily schedule tools",
     description:
-      "This is a simple daily schedule programme. Created with HTML, Tailwind CSS, and Javascript.Have an organised day by creating simple daily-task reminders. Made with User friendly interface and easy navigation in mind",
+      "This is a simple daily schedule programme. Created with HTML, Tailwind CSS, and Javascript.Have an organised day by creating simple daily-task reminders. Made with User friendly interface and easy navigation in mind.",
     link: "https://my-dailytask.netlify.app/",
     githubIcon: <AiFillGithub />,
     githubLink: "https://github.com/kodervine/my-daily-task",

@@ -1,4 +1,5 @@
 import profileImg from "../assets/blue-profile-pic.jpg";
+import { Link } from "react-router-dom";
 import { Image, Text, Title, Grid } from "@mantine/core";
 import HireMe from "../components/HireMe";
 import Footer from "../components/Footer";
@@ -33,7 +34,7 @@ const About = (props: Props) => {
             So, I decided to combine my interests and skills to become a problem
             solver who ensures smooth User Experience while creating stunning
             web apps that engage users. My skill set places me at a unique
-            intersection of left and right brain hemispheres, enabling her to
+            intersection of left and right brain hemispheres, enabling me to
             maximize both aspects of her creativity.
             <br />
             <br />
@@ -42,25 +43,28 @@ const About = (props: Props) => {
             Tailwind, Sass, JavaScript, and React, and I am familiar with
             software like Git, GitHub, Netlify, and Firebase.
             <br />
-            <br />I am eager to enhance her skill set and gain real-world
-            experience through an internship or junior developer role in a
-            dynamic and innovative company. My portfolio webpage showcases my
-            skills and projects, and my GitHub profile highlights my activity in
-            the open-source community.
+            <br />I am eager to gain real-world experience through an internship
+            or junior developer role in a dynamic and innovative company. My{" "}
+            <Link to="/portfolio">portfolio webpage</Link> showcases my skills
+            and projects, and my{" "}
+            <a href="https://github.com/kodervine">GitHub profile </a>{" "}
+            highlights my activity in the open-source community. Also, I have a
+            blog on hashnode where I create articles on technologies I have used
+            and my debugging in frontend development. You can{" "}
+            <a href="https://kodervine.hashnode.dev/">read the blog here.</a>
             <br />
             <br />
             What sets me apart is my ability to communicate effectively and
             contribute to a team environment, getting work done without flimsy
-            excuses. When Im not improving my skills or browsing the latest
+            excuses. When I'm not improving my skills or browsing the latest
             industry trends, you'll find my surfing YouTube for different MBTI
             personalities' behaviors, lingering on Reddit, or chatting
             one-on-one with Google Assistant.
             <br />
             <br />
             If you or your team have been searching for someone who gets work
-            done without excuses and contributes to a positive team environment,
-            I am a right fit. I'll be happy to provide neccessary information
-            for next steps.
+            done and contributes to a positive team environment, I am a right
+            fit. I'll be happy to provide neccessary information for next steps.
           </Text>
           <HireMe />
         </Grid.Col>

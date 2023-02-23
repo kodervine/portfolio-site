@@ -31,7 +31,12 @@ const techTools = [
 
 const Home = () => {
   return (
-    <Grid align="center" justify="center" my="lg">
+    <Grid
+      align="center"
+      justify="center"
+      my="lg"
+      style={{ padding: "10px 20px" }}
+    >
       <Grid.Col md={6} lg={5} order={2} orderSm={2} orderLg={1}>
         {" "}
         <main>

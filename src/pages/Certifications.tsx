@@ -90,12 +90,28 @@ const Certifications = () => {
                 const { link, organisation, title, date } = certs;
                 return (
                   <Accordion.Panel key={nanoid()}>
-                    <Text weight="bold">{title}</Text>
-                    <Flex align="Center" gap="10px">
-                      <Text> Issued by: </Text>
-                      <Badge color="purple" size="sm" variant="dot">
-                        {organisation}
-                      </Badge>
+                    <Text weight="bold" size={16}>
+                      {title}
+                    </Text>
+                    <Flex
+                      align={innerWidth < 700 ? "start" : "center"}
+                      gap="10px"
+                      direction={innerWidth < 700 ? "column" : "row"}
+                    >
+                      <Text display="flex">
+                        {" "}
+                        Issued by:
+                        <Badge
+                          color="purple"
+                          size="sm"
+                          variant="dot"
+                          mt={1.5}
+                          ml={2}
+                        >
+                          {organisation}
+                        </Badge>{" "}
+                      </Text>
+
                       <Text>
                         ● {"  "}
                         {date}

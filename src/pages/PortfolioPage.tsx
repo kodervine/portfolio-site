@@ -57,8 +57,8 @@ const useStyles = createStyles((theme) => ({
   },
 
   imageClass: {
-    width: "80px",
-    height: "100px",
+    width: theme.breakpoints.sm ? "auto" : "387px",
+    height: theme.breakpoints.sm ? "auto" : "290px",
   },
 }));
 
@@ -85,7 +85,9 @@ const PortfolioPage: FC = () => {
       >
         {portfolioData.map((item: PortfolioInterface) => (
           <Accordion.Item value={item.title} key={item.title}>
-            <Accordion.Control>{item.title}</Accordion.Control>
+            <Accordion.Control style={{ fontSize: "16px" }}>
+              {item.title}
+            </Accordion.Control>
             <Accordion.Panel>
               <Grid justify="flex-start" align="center">
                 {/* Image grid */}
@@ -95,7 +97,7 @@ const PortfolioPage: FC = () => {
                       {" "}
                       <Image
                         src={item.image1}
-                        width={387}
+                        width={innerWidth < 700 ? 300 : 387}
                         height={290}
                         fit="contain"
                       />
@@ -104,8 +106,9 @@ const PortfolioPage: FC = () => {
                       {" "}
                       <Image
                         src={item.image2}
-                        width={387}
+                        width={innerWidth < 700 ? 300 : 387}
                         height={290}
+                        className={classes.imageClass}
                         fit="contain"
                       />
                     </Grid.Col>
@@ -116,14 +119,16 @@ const PortfolioPage: FC = () => {
                   <Flex></Flex>
                   <Text>{item.description}</Text>
 
-                  <Box>
+                  <Box my={3}>
                     <Anchor href={item.githubLink} target="_blank">
                       More details
                     </Anchor>
                   </Box>
 
                   <Box>
-                    <Text weight="bold">Technologies used:</Text>
+                    <Text weight="bold" mt={2}>
+                      Technologies used:
+                    </Text>
 
                     {item.technologiesUsed.map((btn, index) => {
                       return (
