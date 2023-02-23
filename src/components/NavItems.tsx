@@ -27,20 +27,20 @@ const useStyles = createStyles((theme) => ({
         : theme.colors.gray[8],
   },
 }));
-const NavItems: React.FC = () => {
+const NavItems: React.FC = ({ handleOpened }) => {
   const { classes } = useStyles();
 
   return (
     <Navbar display="flex" className={classes.nav}>
       <Flex>
-        <Image src={profileImg} radius="50%" width="50px" height="50px" />
+        <Image src={profileImg} radius={50} width="50px" height="50px" />
       </Flex>
 
       {profileListItems.map((listitems: ListItem) => {
         const { text, link } = listitems;
         return (
           <Text key={nanoid()} my={4} size={16}>
-            <Anchor className={classes.anchor}>
+            <Anchor className={classes.anchor} onClick={handleOpened}>
               <Link to={link}>{text}</Link>
             </Anchor>
           </Text>

@@ -10,20 +10,18 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   const [opened, setOpened] = useState(false);
-
+  const handleOpened = () => {
+    return setOpened(false);
+  };
   return (
     <>
       <Box>
-        <Flex
-          justify="space-between"
-          align="center"
-          onClick={() => setOpened((o) => !o)}
-        >
+        <Flex justify="space-between" align="center">
           <Text>
             <Link to="/">CHINENYE ANIKWENZE</Link>
           </Text>
 
-          <AiOutlineMenuFold />
+          <AiOutlineMenuFold onClick={() => setOpened((o) => !o)} />
         </Flex>
 
         <Collapse
@@ -31,7 +29,7 @@ const Navbar = (props: Props) => {
           transitionDuration={1000}
           transitionTimingFunction="linear"
         >
-          <NavItems />
+          <NavItems handleOpened={handleOpened} />
         </Collapse>
       </Box>
     </>
