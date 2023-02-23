@@ -1,14 +1,5 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import {
-  Navbar,
-  Image,
-  Box,
-  Text,
-  Anchor,
-  Flex,
-  createStyles,
-} from "@mantine/core";
+import { Navbar, Text, Anchor, createStyles } from "@mantine/core";
 import profileImg from "../assets/profile-pic.jpg";
 import { nanoid } from "nanoid";
 import { ListItem, profileListItems } from "../data";
@@ -32,7 +23,7 @@ const useStyles = createStyles((theme) => ({
     },
   },
 }));
-const NavItems: React.FC = ({ handleCloseNav }) => {
+const NavItems = ({ handleCloseNav }) => {
   const { classes } = useStyles();
 
   return (
