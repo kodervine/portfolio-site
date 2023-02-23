@@ -23,16 +23,17 @@ const Navbar = (props: Props) => {
         <Flex justify="space-between" align="center">
           <Text
             weight="bold"
-            size={18}
+            size={20}
             onClick={() => {
               setOpened(false);
               handleHomeNavigate();
             }}
+            style={{ cursor: "pointer" }}
           >
             CHINENYE ANIKWENZE
           </Text>
 
-          <AiOutlineMenuFold onClick={() => setOpened((o) => !o)} />
+          <AiOutlineMenuFold onClick={() => setOpened((o) => !o)} size={25} />
         </Flex>
 
         <Collapse

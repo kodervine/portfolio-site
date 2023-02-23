@@ -41,7 +41,9 @@ const NavItems: React.FC = ({ handleCloseNav }) => {
         return (
           <Text key={nanoid()} my={4} size={16}>
             <Anchor className={classes.anchor} onClick={handleCloseNav}>
-              <Link to={link}>{text}</Link>
+              <Link to={link} style={{ color: "black", opacity: "0.8" }}>
+                {text}
+              </Link>
             </Anchor>
           </Text>
         );

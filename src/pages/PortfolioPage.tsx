@@ -12,6 +12,7 @@ import {
   Grid,
   Image,
   Text,
+  Title,
 } from "@mantine/core";
 import { AiOutlinePlus } from "react-icons/ai";
 import Footer from "../components/Footer";
@@ -65,7 +66,7 @@ const PortfolioPage: FC = () => {
   const { classes } = useStyles();
   return (
     <div>
-      <h1>Portfolio</h1>
+      <Title order={4}>Projects</Title>
       <Accordion
         chevron={<AiOutlinePlus size={16} />}
         styles={{
@@ -79,7 +80,7 @@ const PortfolioPage: FC = () => {
         variant="filled"
         classNames={classes}
         className={classes.root}
-        defaultValue="Ceendit -  an invoice generator"
+        defaultValue={portfolioData[0].title}
       >
         {portfolioData.map((item: PortfolioInterface) => (
           <Accordion.Item value={item.title} key={item.title}>

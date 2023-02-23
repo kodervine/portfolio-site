@@ -63,7 +63,7 @@ const Certifications = () => {
   const { classes } = useStyles();
   return (
     <>
-      <Title order={3}>Certifications</Title>
+      <Title order={4}>Certifications</Title>
       <Accordion
         chevron={<AiFillCaretDown size={16} />}
         styles={{

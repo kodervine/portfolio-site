@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       <AppProvider>
         <MantineProvider
           theme={{
-            fontFamily: "Spectral, serif",
+            fontFamily: "Crete Round, serif",
             // colorScheme: "dark",
             colors: {
               // override dark colors to change them for all components
