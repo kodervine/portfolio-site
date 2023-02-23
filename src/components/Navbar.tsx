@@ -19,7 +19,12 @@ const Navbar = (props: Props) => {
   };
   return (
     <>
-      <Box>
+      <Box
+        style={{
+          padding: "10px 20px",
+          boxShadow: " 0px 15px 10px -15px #111",
+        }}
+      >
         <Flex justify="space-between" align="center">
           <Text
             weight="bold"

@@ -63,7 +63,9 @@ const Certifications = () => {
   const { classes } = useStyles();
   return (
     <>
-      <Title order={4}>Certifications</Title>
+      <Title order={4} style={{ padding: "10px 20px" }}>
+        Certifications
+      </Title>
       <Accordion
         chevron={<AiFillCaretDown size={16} />}
         styles={{
@@ -73,7 +75,7 @@ const Certifications = () => {
             },
           },
         }}
-        mx="10px"
+        mx="20px"
         variant="filled"
         classNames={classes}
         className={classes.root}

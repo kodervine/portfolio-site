@@ -65,8 +65,10 @@ const useStyles = createStyles((theme) => ({
 const PortfolioPage: FC = () => {
   const { classes } = useStyles();
   return (
-    <div>
-      <Title order={4}>Projects</Title>
+    <div style={{ padding: "10px 20px" }}>
+      <Title order={4} pb={10}>
+        Projects
+      </Title>
       <Accordion
         chevron={<AiOutlinePlus size={16} />}
         styles={{
@@ -76,7 +78,6 @@ const PortfolioPage: FC = () => {
             },
           },
         }}
-        mx="10px"
         variant="filled"
         classNames={classes}
         className={classes.root}

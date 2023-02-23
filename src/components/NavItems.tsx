@@ -23,14 +23,12 @@ const useStyles = createStyles((theme) => ({
   anchor: {
     color:
       theme.colorScheme === "dark"
-        ? theme.colors.gray[4]
-        : theme.colors.gray[8],
+        ? theme.colors.gray[2]
+        : theme.colors.gray[9],
     textDecoration: "none",
 
     ":hover": {
-      color: "blue",
-      boxShadow: theme.shadows.md,
-      borderRadius: theme.radius.md,
+      color: theme.colorScheme === "dark" ? "white" : "darkblue",
     },
   },
 }));

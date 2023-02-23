@@ -7,7 +7,7 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <div>
+    <div style={{ padding: "10px 20px" }}>
       <Grid align="flex-start" justify="center" mt={10}>
         <Grid.Col md={6} lg={5}>
           {" "}

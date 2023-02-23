@@ -25,9 +25,7 @@ const App: FC<{ opened: boolean }> = ({ opened }) => {
           theme={{
             colorScheme,
             fontFamily: "Crete Round, serif",
-            // colorScheme: "dark",
             colors: {
-              // override dark colors to change them for all components
               dark: [
                 "#d5d7e0",
                 "#acaebf",
