@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Button, Box, Collapse, Flex, Text } from "@mantine/core";
 
@@ -10,15 +10,26 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   const [opened, setOpened] = useState(false);
-  const handleOpened = () => {
-    return setOpened(false);
+  const handleCloseNav = () => {
+    return setOpened(!opened);
+  };
+  const navigate = useNavigate();
+  const handleHomeNavigate = () => {
+    navigate("/");
   };
   return (
     <>
       <Box>
         <Flex justify="space-between" align="center">
-          <Text>
-            <Link to="/">CHINENYE ANIKWENZE</Link>
+          <Text
+            weight="bold"
+            size={18}
+            onClick={() => {
+              setOpened(false);
+              handleHomeNavigate();
+            }}
+          >
+            CHINENYE ANIKWENZE
           </Text>
 
           <AiOutlineMenuFold onClick={() => setOpened((o) => !o)} />
@@ -29,7 +40,7 @@ const Navbar = (props: Props) => {
           transitionDuration={1000}
           transitionTimingFunction="linear"
         >
-          <NavItems handleOpened={handleOpened} />
+          <NavItems handleCloseNav={handleCloseNav} />
         </Collapse>
       </Box>
     </>
