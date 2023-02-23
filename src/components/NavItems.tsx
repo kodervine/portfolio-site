@@ -23,7 +23,7 @@ const useStyles = createStyles((theme) => ({
     },
   },
 }));
-const NavItems = ({ handleCloseNav }) => {
+const NavItems = ({ handleCloseNav }: any) => {
   const { classes } = useStyles();
 
   return (
