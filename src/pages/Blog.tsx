@@ -15,6 +15,7 @@ import { useHover } from "@mantine/hooks";
 import { nanoid } from "nanoid";
 import { fetchBlogs } from "../queries/BlogQuery";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 type Props = {};
 
@@ -33,15 +34,25 @@ const Blog = (props: Props) => {
     <Box px={20}>
       <Navbar title="CHINENYE ANIKWENZE" />
       <Title order={3} mt="md">
-        Published blogs
+        Articles
       </Title>
 
       {blogData.length === 0 ? (
         <Text size={20}>Loading...</Text>
       ) : (
         <Grid align="center" justify="center">
-          {blogData.map((blogs: any, index: number) => {
+          {blogData.map((blogs: any) => {
             const { title, brief, slug, coverImage, dateAdded } = blogs;
+            const numericDate = dateAdded;
+            const date = new Date(numericDate);
+            const options: any = {
+              // weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            };
+            const textDate = date.toLocaleDateString("en-UK", options);
+
             return (
               <Grid.Col md={6} lg={3.5} ref={ref} key={nanoid()}>
                 <Card
@@ -67,7 +78,7 @@ const Blog = (props: Props) => {
                       {title}
                     </Text>
                     <Badge color="yellow" size="sm" variant="dot" mr="10px">
-                      {dateAdded}
+                      {textDate}
                     </Badge>
 
                     <Text mt="xs" color="dimmed" size="sm">
@@ -104,6 +115,7 @@ const Blog = (props: Props) => {
           </Anchor>
         </Button>
       </Box>
+      <Footer />
     </Box>
   );
 };
