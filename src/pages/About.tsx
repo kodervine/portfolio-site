@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import { Image, Text, Title, Grid } from "@mantine/core";
 import HireMe from "../components/HireMe";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 type Props = {};
 
 const About = (props: Props) => {
   return (
     <div style={{ padding: "10px 20px" }}>
+      <Navbar title="CHINENYE ANIKWENZE" />
       <Grid align="flex-start" justify="center" mt={10}>
         <Grid.Col md={6} lg={5}>
           {" "}

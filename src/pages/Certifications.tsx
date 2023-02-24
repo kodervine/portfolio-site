@@ -11,6 +11,8 @@ import {
 import { AiOutlinePlus, AiFillCaretDown } from "react-icons/ai";
 import { certificationsData } from "../data";
 import { nanoid } from "nanoid";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -63,6 +65,7 @@ const Certifications = () => {
   const { classes } = useStyles();
   return (
     <>
+      <Navbar />
       <Title order={4} style={{ padding: "10px 20px" }}>
         Certifications
       </Title>
@@ -129,6 +132,7 @@ const Certifications = () => {
           );
         })}
       </Accordion>
+      <Footer />
     </>
   );
 };

@@ -2,6 +2,7 @@ import {
   createStyles,
   Container,
   Group,
+  Box,
   ActionIcon,
   Anchor,
   Text,
@@ -51,7 +52,7 @@ const Footer = () => {
 
   return (
     <div className={classes.footer}>
-      <Container className={classes.inner}>
+      <Box className={classes.inner} px={20}>
         <Group spacing={0} className={classes.links} position="right" noWrap>
           {iconData.map((icons: IconItem) => {
             const { icon, link, text } = icons;
@@ -67,7 +68,7 @@ const Footer = () => {
           })}
         </Group>
         <Text size={12}>&copy; Chinenye Anikwenze, {copyrightYear}</Text>
-      </Container>
+      </Box>
     </div>
   );
 };

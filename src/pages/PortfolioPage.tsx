@@ -16,6 +16,7 @@ import {
 } from "@mantine/core";
 import { AiOutlinePlus } from "react-icons/ai";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -66,6 +67,7 @@ const PortfolioPage: FC = () => {
   const { classes } = useStyles();
   return (
     <div style={{ padding: "10px 20px" }}>
+      <Navbar title="CHINENYE ANIKWENZE" />
       <Title order={4} pb={10}>
         Projects
       </Title>

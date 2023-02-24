@@ -1,14 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Button, Box, Collapse, Flex, Text } from "@mantine/core";
-
 import { AiOutlineMenuFold, AiOutlineCloseCircle } from "react-icons/ai";
-
 import NavItems from "./NavItems";
 
-type Props = {};
-
-const Navbar = (props: Props) => {
+const Navbar = (props: any) => {
   const [opened, setOpened] = useState(false);
   const handleCloseNav = () => {
     return setOpened(!opened);
@@ -21,7 +17,7 @@ const Navbar = (props: Props) => {
     <>
       <Box
         style={{
-          padding: "10px 20px",
+          padding: "10px 0px",
           boxShadow: " 0px 15px 10px -15px #111",
         }}
       >
@@ -35,7 +31,8 @@ const Navbar = (props: Props) => {
             }}
             style={{ cursor: "pointer" }}
           >
-            CHINENYE ANIKWENZE
+            {console.log(props.title)}
+            {props.title}
           </Text>
 
           <AiOutlineMenuFold onClick={() => setOpened((o) => !o)} size={25} />

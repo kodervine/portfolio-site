@@ -56,7 +56,6 @@ const App: FC<{ opened: boolean }> = ({ opened }) => {
           }}
           withGlobalStyles
         >
-          <Navbar />
           <Router />
           {/* <Tooltip label={colorScheme === "dark" ? "Day mode" : "Nigt mode"}> */}
           <Box

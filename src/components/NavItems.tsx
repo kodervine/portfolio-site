@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Navbar, Text, Anchor, createStyles } from "@mantine/core";
+import { Navbar, Text, Anchor, createStyles, Box } from "@mantine/core";
 import profileImg from "../assets/profile-pic.jpg";
 import { nanoid } from "nanoid";
 import { ListItem, profileListItems } from "../data";
@@ -36,7 +36,7 @@ const NavItems = ({ handleCloseNav }: any) => {
         const { text, link } = listitems;
         return (
           <Text key={nanoid()} my={4} size={16}>
-            <Anchor onClick={handleCloseNav}>
+            <Box onClick={handleCloseNav}>
               <Link
                 to={link}
                 style={{ opacity: "0.8" }}
@@ -44,7 +44,7 @@ const NavItems = ({ handleCloseNav }: any) => {
               >
                 {text}
               </Link>
-            </Anchor>
+            </Box>
           </Text>
         );
       })}
