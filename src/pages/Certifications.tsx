@@ -65,7 +65,7 @@ const Certifications = () => {
   const { classes } = useStyles();
   return (
     <>
-      <Navbar />
+      <Navbar title="CHINENYE ANIKWENZE" />
       <Title order={4} style={{ padding: "10px 20px" }}>
         Certifications
       </Title>

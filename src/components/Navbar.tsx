@@ -31,7 +31,6 @@ const Navbar = (props: any) => {
             }}
             style={{ cursor: "pointer" }}
           >
-            {console.log(props.title)}
             {props.title}
           </Text>
 

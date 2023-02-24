@@ -1,27 +1,50 @@
-import { Badge, Card, Grid, Flex, Image, Text, Title } from "@mantine/core";
+import { useEffect, useState } from "react";
+import {
+  Badge,
+  Card,
+  Grid,
+  Flex,
+  Image,
+  Text,
+  Title,
+  Button,
+  Anchor,
+  Box,
+} from "@mantine/core";
 import { useHover } from "@mantine/hooks";
-import { certificationsData } from "../data";
 import { nanoid } from "nanoid";
+import { fetchBlogs } from "../queries/BlogQuery";
+import Navbar from "../components/Navbar";
 
 type Props = {};
 
 const Blog = (props: Props) => {
   const { hovered, ref } = useHover();
+  const [blogData, setBlogData] = useState<any>([]);
+  useEffect(() => {
+    const getBlogs = async () => {
+      const response = await fetchBlogs();
+      setBlogData(response);
+    };
+    getBlogs();
+  }, []);
+
   return (
-    <>
-      <Title order={3}>Published blogs</Title>
+    <Box px={20}>
+      <Navbar title="CHINENYE ANIKWENZE" />
+      <Title order={3} mt="md">
+        Published blogs
+      </Title>
       <Grid align="center" justify="center">
-        {certificationsData.map((certs) => {
-          const { certifications, year } = certs;
+        {blogData.map((blogs: any, index: number) => {
+          const { title, brief, slug, coverImage, dateAdded } = blogs;
           return (
-            <Grid.Col md={6} lg={3.5} ref={ref}>
+            <Grid.Col md={6} lg={3.5} ref={ref} key={nanoid()}>
               <Card
                 shadow={hovered ? "xl" : "md"}
                 p="xl"
                 px={20}
                 component="a"
-                href="#"
-                target="_blank"
                 key={nanoid()}
                 my={10}
                 mx={{ sm: 20, md: 10 }}
@@ -29,7 +52,7 @@ const Blog = (props: Props) => {
               >
                 <Card.Section>
                   <Image
-                    src=""
+                    src={coverImage}
                     height={200}
                     alt="course certification images"
                   />
@@ -37,14 +60,20 @@ const Blog = (props: Props) => {
 
                 <Flex direction="column" align="start">
                   <Text weight={500} size="lg" my="md">
-                    title
+                    {title}
                   </Text>
                   <Badge color="yellow" size="sm" variant="dot" mr="10px">
-                    organisation
+                    {dateAdded}
                   </Badge>
 
                   <Text mt="xs" color="dimmed" size="sm">
-                    description
+                    {brief}{" "}
+                    <a
+                      href={`https://kodervine.hashnode.dev/${slug}`}
+                      target="_blank"
+                    >
+                      Read more
+                    </a>
                   </Text>
                 </Flex>
               </Card>
@@ -52,7 +81,16 @@ const Blog = (props: Props) => {
           );
         })}
       </Grid>
-    </>
+      <Button>
+        <Anchor
+          href="https://kodervine.hashnode.dev"
+          target="_blank"
+          style={{ color: "white", textDecoration: "none" }}
+        >
+          Read more articles
+        </Anchor>
+      </Button>
+    </Box>
   );
 };
 
