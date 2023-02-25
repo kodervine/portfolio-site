@@ -41,7 +41,7 @@ const Blog = (props: Props) => {
         <Text size={20}>Loading...</Text>
       ) : (
         <Grid align="center" justify="center">
-          {blogData.map((blogs: any) => {
+          {blogData.slice(0, 6).map((blogs: any) => {
             const { title, brief, slug, coverImage, dateAdded } = blogs;
             const numericDate = dateAdded;
             const date = new Date(numericDate);
