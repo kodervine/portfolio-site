@@ -18,6 +18,15 @@ import { AiOutlinePlus } from "react-icons/ai";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
+interface PortfolioPageProps {}
+
+interface PortfolioPageClasses {
+  root: string;
+  item: string;
+  chevron: string;
+  imageClass: string;
+}
+
 const useStyles = createStyles((theme) => ({
   root: {
     backgroundColor:
@@ -63,7 +72,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const PortfolioPage: FC = () => {
+const PortfolioPage: FC<PortfolioPageProps> = () => {
   const { classes } = useStyles();
   return (
     <div style={{ padding: "10px 20px" }}>
@@ -81,7 +90,7 @@ const PortfolioPage: FC = () => {
           },
         }}
         variant="filled"
-        classNames={classes}
+        classNames={classes as PortfolioPageClasses}
         className={classes.root}
         defaultValue={portfolioData[0].title}
       >
