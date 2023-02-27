@@ -16,6 +16,7 @@ import { nanoid } from "nanoid";
 import { fetchBlogs } from "../queries/BlogQuery";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Loading from "../components/Loading";
 
 type Props = {};
 
@@ -38,8 +39,9 @@ const Blog = (props: Props) => {
       </Title>
 
       {blogData.length === 0 ? (
-        <Text size={20}>Loading...</Text>
+        <Loading />
       ) : (
+        // <Text size={20}>Loading...</Text>
         <Grid align="center" justify="center">
           {blogData.slice(0, 6).map((blogs: any) => {
             const { title, brief, slug, coverImage, dateAdded } = blogs;
