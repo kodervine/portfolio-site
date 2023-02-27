@@ -21,16 +21,17 @@ const About = (props: Props) => {
             MEET CHINENYE
           </Title>
           <Text align="justify">
-            I am a Frontend developer who creates stunning and user-friendly web
+            I am a software developer who creates stunning and user-friendly web
             apps that engage and ease user experience on the client side. My
             interest lies at the intersection of solving problems for customers
             and ensuring a smooth User Experience.
             <br />
             <br />
             As a technology lover with an interest in human behavior, my journey
-            to becoming a Frontend developer was a natural fit after years of
-            creating highly converting campaigns, aesthetically appealing
-            emails, and ensuring customer retention for my copywriting clients.
+            to becoming a software developer (frontend)was a natural fit after
+            years of creating highly converting campaigns, aesthetically
+            appealing emails, and ensuring customer retention for my copywriting
+            clients.
             <br />
             <br />
             So, I decided to combine my interests and skills to become a problem
@@ -45,15 +46,13 @@ const About = (props: Props) => {
             Tailwind, Sass, JavaScript, and React, and I am familiar with
             software like Git, GitHub, Netlify, and Firebase.
             <br />
-            <br />I am eager to gain real-world experience through an internship
-            or junior developer role in a dynamic and innovative company. My{" "}
-            <Link to="/portfolio">portfolio webpage</Link> showcases my skills
-            and projects, and my{" "}
+            <br /> My <Link to="/portfolio">portfolio webpage</Link> showcases
+            my skills and projects, and my{" "}
             <a href="https://github.com/kodervine">GitHub profile </a>{" "}
             highlights my activity in the open-source community. Also, I have a
             blog on hashnode where I create articles on technologies I have used
             and my debugging in frontend development. You can{" "}
-            <a href="https://kodervine.hashnode.dev/">read the blog here.</a>
+            <a href="https://kodervine.hashnode.dev/">read my articles here.</a>
             <br />
             <br />
             What sets me apart is my ability to communicate effectively and
@@ -63,10 +62,8 @@ const About = (props: Props) => {
             personalities' behaviors, lingering on Reddit, or chatting
             one-on-one with Google Assistant.
             <br />
-            <br />
-            If you or your team have been searching for someone who gets work
-            done and contributes to a positive team environment, I am a right
-            fit. I'll be happy to provide neccessary information for next steps.
+            <br />I am open to collaboration on software projects and also
+            technical writing opportunities
           </Text>
           <HireMe />
         </Grid.Col>

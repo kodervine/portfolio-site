@@ -50,8 +50,7 @@ const Home = () => {
             <Text align="justify">
               I am a resourceful Software Developer proficient in HTML, CSS,
               JavaScript and React. I love creating visually stunning and
-              user-friendly websites that engage and ease users experience.
-              Available for remote or on-site internship
+              user-friendly websites that engage and ease users' experience.
             </Text>
             <Title order={6} my="sm">
               Tech Stack:{" "}
