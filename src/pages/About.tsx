@@ -63,7 +63,7 @@ const About = (props: Props) => {
             one-on-one with Google Assistant.
             <br />
             <br />I am open to collaboration on software projects and also
-            technical writing opportunities
+            technical writing opportunities.
           </Text>
           <HireMe />
         </Grid.Col>
