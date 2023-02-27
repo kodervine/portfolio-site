@@ -18,9 +18,15 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 
-type Props = {};
+type BlogProps = {
+  title: string;
+  brief: string;
+  slug: string;
+  coverImage: string;
+  dateAdded: number;
+};
 
-const Blog = (props: Props) => {
+const Blog = () => {
   const { hovered, ref } = useHover();
   const [blogData, setBlogData] = useState<any>([]);
   useEffect(() => {
@@ -43,7 +49,7 @@ const Blog = (props: Props) => {
       ) : (
         // <Text size={20}>Loading...</Text>
         <Grid align="center" justify="center">
-          {blogData.slice(0, 6).map((blogs: any) => {
+          {blogData.slice(0, 6).map((blogs: BlogProps) => {
             const { title, brief, slug, coverImage, dateAdded } = blogs;
             const numericDate = dateAdded;
             const date = new Date(numericDate);
