@@ -64,9 +64,9 @@ type Props = {};
 const Certifications = () => {
   const { classes } = useStyles();
   return (
-    <>
+    <main style={{ padding: "0px 20px" }}>
       <Navbar title="CHINENYE ANIKWENZE" />
-      <Title order={4} style={{ padding: "10px 20px" }}>
+      <Title order={4} style={{ paddingBottom: " 10px" }} mt="md">
         Certifications
       </Title>
       <Accordion
@@ -78,7 +78,7 @@ const Certifications = () => {
             },
           },
         }}
-        mx="20px"
+        // mx="20px"
         variant="filled"
         classNames={classes}
         className={classes.root}
@@ -133,7 +133,7 @@ const Certifications = () => {
         })}
       </Accordion>
       <Footer />
-    </>
+    </main>
   );
 };
 

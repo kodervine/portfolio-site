@@ -77,7 +77,7 @@ const PortfolioPage: FC<PortfolioPageProps> = () => {
   return (
     <div style={{ padding: "10px 20px" }}>
       <Navbar title="CHINENYE ANIKWENZE" />
-      <Title order={4} pb={10}>
+      <Title order={4} pb={10} mt="md">
         Projects
       </Title>
       <Accordion

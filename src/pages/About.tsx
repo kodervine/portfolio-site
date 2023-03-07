@@ -9,7 +9,7 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <div style={{ padding: "10px 20px" }}>
+    <main style={{ padding: "10px 20px" }}>
       <Navbar title="CHINENYE ANIKWENZE" />
       <Grid align="flex-start" justify="center" mt={10}>
         <Grid.Col md={6} lg={5}>
@@ -69,7 +69,7 @@ const About = (props: Props) => {
         </Grid.Col>
       </Grid>
       <Footer />
-    </div>
+    </main>
   );
 };
 

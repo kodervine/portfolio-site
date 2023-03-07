@@ -29,7 +29,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   textColor: {
-    color: theme.colorScheme === "dark" ? "gray" : "purple",
+    color: theme.colorScheme === "dark" ? "#ffffff" : "purple",
   },
 }));
 
@@ -75,7 +75,7 @@ const Features = () => {
                     weight={500}
                     size="lg"
                     mt="md"
-                    color={classes.textColor}
+                    className={classes.textColor}
                   >
                     {organisation.toUpperCase()}
                   </Text>
