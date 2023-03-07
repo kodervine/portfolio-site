@@ -9,6 +9,7 @@ import Publications from "../pages/Publications";
 // import About from "../pages/About";
 import Loading from "../components/Loading";
 import { Suspense, lazy } from "react";
+import Features from "../pages/Features";
 
 const Home = lazy(() => import("../pages/Home"));
 const PortfolioPage = lazy(() => import("../pages/PortfolioPage"));
@@ -27,6 +28,7 @@ export default () => {
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/publications" element={<Publications />} />
+          <Route path="/features" element={<Features />} />
         </Routes>
       </Suspense>
     </>

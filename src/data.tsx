@@ -34,6 +34,7 @@ export const profileListItems: ListItem[] = [
   },
   { text: "Blog", link: "/blog" },
   { text: "Publications", link: "/publications" },
+  { text: "Features", link: "/features" },
 ];
 
 export interface IconItem {
@@ -171,5 +172,15 @@ export const certificationsData = [
           "Distinguish between front-end, back-end, and full-stack developers. Create and style a webpage with HTML and CSS. The benefits of working with UI frameworks.",
       },
     ],
+  },
+];
+
+export const featureData = [
+  {
+    dateAdded: "2023",
+    link: "#",
+    title: "Name",
+    organisation: "Tech skills hack",
+    coverImg: "",
   },
 ];
