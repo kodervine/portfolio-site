@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import {
   Badge,
   Card,
@@ -7,9 +6,8 @@ import {
   Image,
   Text,
   Title,
-  Button,
-  Anchor,
   Box,
+  createStyles,
 } from "@mantine/core";
 import { useHover } from "@mantine/hooks";
 import { nanoid } from "nanoid";
@@ -25,8 +23,19 @@ type FeatureProps = {
   coverImg: string;
 };
 
+const useStyles = createStyles((theme) => ({
+  item: {
+    height: "500px",
+  },
+
+  textColor: {
+    color: theme.colorScheme === "dark" ? "gray" : "purple",
+  },
+}));
+
 const Features = () => {
   const { hovered, ref } = useHover();
+  const { classes } = useStyles();
 
   return (
     <Box px={20}>
@@ -51,7 +60,7 @@ const Features = () => {
           return (
             <Grid.Col md={6} lg={3.5} ref={ref} key={nanoid()}>
               <Card
-                shadow={hovered ? "xl" : "md"}
+                shadow={hovered ? "xl" : "xs"}
                 p="xl"
                 px={20}
                 component="a"
@@ -59,9 +68,15 @@ const Features = () => {
                 my={10}
                 mx={{ sm: 20, md: 10 }}
                 radius="lg"
+                className={classes.item}
               >
                 <Flex direction="column" align="start">
-                  <Text weight={500} size="lg" mt="md" color="purple">
+                  <Text
+                    weight={500}
+                    size="lg"
+                    mt="md"
+                    color={classes.textColor}
+                  >
                     {organisation.toUpperCase()}
                   </Text>
                   <Text weight={400} size="lg">
@@ -72,7 +87,7 @@ const Features = () => {
                   </Badge>
                 </Flex>
                 <Card.Section>
-                  <Image src={coverImg} height={350} alt="feature image" />
+                  <Image src={coverImg} alt="feature image" />
                 </Card.Section>
               </Card>
             </Grid.Col>
