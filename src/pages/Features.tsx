@@ -60,22 +60,20 @@ const Features = () => {
                 mx={{ sm: 20, md: 10 }}
                 radius="lg"
               >
-                <Card.Section>
-                  <Image
-                    src={coverImg}
-                    height={200}
-                    alt="course certification images"
-                  />
-                </Card.Section>
-
                 <Flex direction="column" align="start">
-                  <Text weight={500} size="lg" my="md">
+                  <Text weight={500} size="lg" mt="md" color="purple">
+                    {organisation.toUpperCase()}
+                  </Text>
+                  <Text weight={400} size="lg">
                     {title}
                   </Text>
-                  <Badge color="yellow" size="sm" variant="dot" mr="10px">
+                  <Badge color="red" size="sm" variant="dot" mr="10px">
                     {textDate}
                   </Badge>
                 </Flex>
+                <Card.Section>
+                  <Image src={coverImg} height={350} alt="feature image" />
+                </Card.Section>
               </Card>
             </Grid.Col>
           );

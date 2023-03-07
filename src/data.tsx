@@ -33,8 +33,8 @@ export const profileListItems: ListItem[] = [
     link: "https://drive.google.com/drive/folders/1mtB7QT5DY_l9n7blL6txMKN9G5mg4Iw_",
   },
   { text: "Blog", link: "/blog" },
-  { text: "Publications", link: "/publications" },
   { text: "Features", link: "/features" },
+  { text: "Publications", link: "/publications" },
 ];
 
 export interface IconItem {
@@ -177,10 +177,17 @@ export const certificationsData = [
 
 export const featureData = [
   {
-    dateAdded: "2023",
+    dateAdded: "8 March 2023",
     link: "#",
-    title: "Name",
+    title: "Journey into Tech",
     organisation: "Tech skills hack",
+    coverImg: "",
+  },
+  {
+    dateAdded: "8 March 2023",
+    link: "#",
+    title: "From History Academia to Software development",
+    organisation: "Empower Her Community",
     coverImg: "",
   },
 ];
