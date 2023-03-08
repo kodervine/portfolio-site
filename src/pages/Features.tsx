@@ -25,7 +25,7 @@ type FeatureProps = {
 
 const useStyles = createStyles((theme) => ({
   item: {
-    height: "500px",
+    height: "550px",
   },
 
   textColor: {
@@ -69,6 +69,7 @@ const Features = () => {
                 mx={{ sm: 20, md: 10 }}
                 radius="lg"
                 className={classes.item}
+                href={link}
               >
                 <Flex direction="column" align="start">
                   <Text

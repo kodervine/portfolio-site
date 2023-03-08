@@ -18,6 +18,7 @@ import prytoPhoneImg from "./assets/pryto-phone.png";
 import udemyJavascriptCert from "./assets/udemy-javascript-course.jpg";
 import courseraMetaReactBasics from "./assets/coursera-introduction-to-frontend.jpeg";
 import courseraMetaIntroToFrontend from "./assets/coursera-reactbasics-meta.jpeg";
+import techSkillsHackFeature from "./assets/techskills-hack-feature.png";
 
 export interface ListItem {
   text: string;
@@ -179,15 +180,15 @@ export const featureData = [
   {
     dateAdded: "8 March 2023",
     link: "#",
-    title: "Journey into Tech",
-    organisation: "Tech skills hack",
+    title: "From History Academia to Software development",
+    organisation: "Empower Her Community",
     coverImg: "",
   },
   {
     dateAdded: "8 March 2023",
-    link: "#",
-    title: "From History Academia to Software development",
-    organisation: "Empower Her Community",
-    coverImg: "",
+    link: "https://techskillshack.com/how-tech-skills-hack-helped-me-land-my-first-tech-job/",
+    title: "How I landed my first tech job",
+    organisation: "Tech skills hack",
+    coverImg: techSkillsHackFeature,
   },
 ];
