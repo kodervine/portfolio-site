@@ -18,6 +18,7 @@ import prytoPhoneImg from "./assets/pryto-phone.png";
 import udemyJavascriptCert from "./assets/udemy-javascript-course.jpg";
 import courseraMetaReactBasics from "./assets/coursera-introduction-to-frontend.jpeg";
 import courseraMetaIntroToFrontend from "./assets/coursera-reactbasics-meta.jpeg";
+import courseraMetaAdvancedReact from "./assets/courseraMetaAdvancedReact.png";
 import techSkillsHackFeature from "./assets/techskills-hack-feature.png";
 
 export interface ListItem {
@@ -140,6 +141,15 @@ export const certificationsData = [
   {
     year: "2023",
     certifications: [
+      {
+        date: "April, 2023",
+        link: "https://www.coursera.org/account/accomplishments/verify/9DVVQR5SLM9A",
+        image: courseraMetaAdvancedReact,
+        organisation: "Meta",
+        title: "Advanced React",
+        description:
+          "This course teaches how to create robust and reusable components using advanced techniques and common behavior patterns. Covers interacting with remote servers and fetching/posting data via APIs",
+      },
       {
         date: "February, 2023",
         link: "https://www.coursera.org/account/accomplishments/verify/L4F72SP5WTT6",
