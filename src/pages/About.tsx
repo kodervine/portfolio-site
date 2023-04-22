@@ -21,7 +21,7 @@ const About = (props: Props) => {
             MEET CHINENYE
           </Title>
           <Text align="justify">
-            I am a software developer who creates stunning and user-friendly web
+            I am a software developer and technical writer who creates stunning and user-friendly web
             apps that engage and ease user experience on the client side. My
             interest lies at the intersection of solving problems for customers
             and ensuring a smooth User Experience.

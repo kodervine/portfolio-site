@@ -43,14 +43,13 @@ const Home = () => {
         <Grid.Col md={6} lg={5} order={2} orderSm={2} orderLg={1}>
           {" "}
           <main>
-            <Title order={4}>Hiiii! My name is</Title>
             <Title order={1} weight={900} my="sm">
               CHINENYE ANIKWENZE
             </Title>
             <Text align="justify">
-              I am a resourceful Software Developer proficient in HTML, CSS,
-              JavaScript and React. I love creating visually stunning and
-              user-friendly websites that engage and ease users' experience.
+              I am a resourceful Software Developer and technical writer. I love
+              creating visually stunning and user-friendly websites that engage
+              and ease users' experience.
             </Text>
             <Title order={6} my="sm">
               Tech Stack:{" "}
