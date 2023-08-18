@@ -1,9 +1,9 @@
-import profileImg from "../assets/blue-profile-pic.jpg";
 import { Link } from "react-router-dom";
 import { Image, Text, Title, Grid } from "@mantine/core";
 import HireMe from "../components/HireMe";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import profileImg from "../assets/blue-profile-pic.jpg";
 
 type Props = {};
 
@@ -21,10 +21,10 @@ const About = (props: Props) => {
             MEET CHINENYE
           </Title>
           <Text align="justify">
-            I am a software developer and technical writer who creates stunning and user-friendly web
-            apps that engage and ease user experience on the client side. My
-            interest lies at the intersection of solving problems for customers
-            and ensuring a smooth User Experience.
+            I am a software developer and technical writer who creates stunning
+            and user-friendly web apps that engage and ease user experience on
+            the client side. My interest lies at the intersection of solving
+            problems for customers and ensuring a smooth User Experience.
             <br />
             <br />
             As a technology lover with an interest in human behavior, my journey
