@@ -3,10 +3,8 @@ import { portfolioData, PortfolioInterface } from "../data";
 import {
   Accordion,
   Anchor,
-  Avatar,
   Badge,
   Box,
-  Button,
   createStyles,
   Flex,
   Grid,
@@ -70,10 +68,14 @@ const useStyles = createStyles((theme) => ({
     width: theme.breakpoints.sm ? "auto" : "387px",
     height: theme.breakpoints.sm ? "auto" : "290px",
   },
+  link: {
+    cursor: "pointer",
+  },
 }));
 
 const PortfolioPage: FC<PortfolioPageProps> = () => {
   const { classes } = useStyles();
+  console.log(portfolioData);
   return (
     <div style={{ padding: "10px 20px" }}>
       <Navbar title="CHINENYE ANIKWENZE" />
@@ -101,41 +103,42 @@ const PortfolioPage: FC<PortfolioPageProps> = () => {
             </Accordion.Control>
             <Accordion.Panel>
               <Grid justify="flex-start" align="center">
-                {/* Image grid */}
                 <Grid.Col md={6} lg={5}>
-                  <Grid>
-                    <Grid.Col md={6} lg={5}>
-                      {" "}
-                      <Image
-                        src={item.image1}
-                        width={innerWidth < 700 ? 300 : 387}
-                        height={290}
-                        fit="contain"
-                      />
-                    </Grid.Col>
-                    <Grid.Col md={6} lg={2}>
-                      {" "}
-                      <Image
-                        src={item.image2}
-                        width={innerWidth < 700 ? 300 : 387}
-                        height={290}
-                        className={classes.imageClass}
-                        fit="contain"
-                      />
-                    </Grid.Col>
-                  </Grid>
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+                    {/* Image grid */}
+                    <Grid>
+                      <Grid.Col md={6} lg={5}>
+                        <Image
+                          src={item.image1}
+                          width={innerWidth < 700 ? 300 : 387}
+                          height={290}
+                          fit="contain"
+                        />
+                      </Grid.Col>
+                      <Grid.Col md={6} lg={2}>
+                        <Image
+                          src={item.image2}
+                          width={innerWidth < 700 ? 300 : 387}
+                          height={290}
+                          className={classes.imageClass}
+                          fit="contain"
+                        />
+                      </Grid.Col>
+                    </Grid>
+                  </a>
                 </Grid.Col>
-                {/* portfolio text grid */}
                 <Grid.Col md={6} lg={5}>
-                  <Flex></Flex>
+                  <Flex />
                   <Text>{item.description}</Text>
-
                   <Box my={3}>
-                    <Anchor href={item.githubLink} target="_blank">
+                    <Anchor
+                      href={item.githubLink}
+                      target="_blank"
+                      className={classes.link}
+                    >
                       More details
                     </Anchor>
                   </Box>
-
                   <Box>
                     <Text weight="bold" mt={2}>
                       Technologies used:

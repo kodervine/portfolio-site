@@ -15,6 +15,10 @@ import kaddIpadImg from "./assets/kadd-ipad.png";
 import kaddPhoneImg from "./assets/kadd-phone.png";
 import prytoIpadImg from "./assets/pryto-ipad.png";
 import prytoPhoneImg from "./assets/pryto-phone.png";
+import noteBoxPhoneImg from "./assets/noteboxMobile.png";
+import noteBoxDesktopImg from "./assets/noteboxDesktop.png";
+import ratesReaderDesktopImg from "./assets/ratesReaderDesktop.png";
+import ratesReaderPhoneImg from "./assets/ratesReaderMobile.png";
 import udemyJavascriptCert from "./assets/udemy-javascript-course.jpg";
 import courseraMetaReactBasics from "./assets/coursera-introduction-to-frontend.jpeg";
 import courseraMetaIntroToFrontend from "./assets/coursera-reactbasics-meta.jpeg";
@@ -95,7 +99,7 @@ export const portfolioData: PortfolioInterface[] = [
     title: "Ceendit -  an invoice generator",
     description:
       "Say goodbye to manual invoicing and hello to effortless payment processing. Create professional invoices in pdf format for your clients in less than a minute",
-    link: "",
+    link: "https://ceendit.netlify.app",
     githubIcon: <AiFillGithub />,
     githubLink: "https://github.com/kodervine/ceendit-react",
     technologiesUsed: ["React", "Javascript", "Chakra UI", "Firebase"],
@@ -103,16 +107,15 @@ export const portfolioData: PortfolioInterface[] = [
     image2: ceenditPhoneImg,
   },
   {
-    title:
-      "Ratesreader - Data visualization dashboard and news update application",
+    title: "Ratesreader - News update and Data visualization dashboard",
     description:
       "The currency data visualization dashboard is a tool that helps users stay updated on the latest currency exchange rates and market news. The dashboard displays real-time exchange rates for different currencies, along with historical price data and news updates.",
     link: "https://ratesreader.brimble.app/",
     githubIcon: <AiFillGithub />,
     githubLink: "https://github.com/kodervine/ratesreader",
     technologiesUsed: ["React", "Tailwind", "Typescript", "Context API"],
-    image1: prytoIpadImg,
-    image2: prytoPhoneImg,
+    image1: ratesReaderDesktopImg,
+    image2: ratesReaderPhoneImg,
   },
   {
     title: "Pryto - live crypto currency converter",
@@ -126,15 +129,15 @@ export const portfolioData: PortfolioInterface[] = [
     image2: prytoPhoneImg,
   },
   {
-    title: "Notebox - personal notetaking app",
+    title: "Notebox - personal notetaking application",
     description:
       "This web app allows users to easily create, manage, and categorize notes with a user-friendly interface, while also offering features like sorting, searching by tags, and responsiveness for both desktop and mobile devices.",
     link: "https://notebox.brimble.app/",
     githubIcon: <AiFillGithub />,
     githubLink: "https://github.com/kodervine/notebox",
     technologiesUsed: ["Javascript", "Tailwind"],
-    image1: prytoIpadImg,
-    image2: prytoPhoneImg,
+    image1: noteBoxDesktopImg,
+    image2: noteBoxPhoneImg,
   },
   {
     title: "Kadd - customizable business card creator",
