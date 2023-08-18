@@ -24,6 +24,7 @@ import courseraMetaReactBasics from "./assets/coursera-introduction-to-frontend.
 import courseraMetaIntroToFrontend from "./assets/coursera-reactbasics-meta.jpeg";
 import courseraMetaAdvancedReact from "./assets/courseraMetaAdvancedReact.png";
 import techSkillsHackFeature from "./assets/techskills-hack-feature.png";
+import womenDayFeature from "./assets/women Day feature.png";
 
 export interface ListItem {
   text: string;
@@ -215,10 +216,10 @@ export const certificationsData = [
 export const featureData = [
   {
     dateAdded: "8 March 2023",
-    link: "#",
+    link: "https://kodervine.hashnode.dev/from-history-academia-to-programming-my-180-journey-to-software-development",
     title: "From History Academia to Software development",
     organisation: "Empower Her Community",
-    coverImg: "",
+    coverImg: womenDayFeature,
   },
   {
     dateAdded: "8 March 2023",
