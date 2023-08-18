@@ -103,6 +103,18 @@ export const portfolioData: PortfolioInterface[] = [
     image2: ceenditPhoneImg,
   },
   {
+    title:
+      "Ratesreader - Data visualization dashboard and news update application",
+    description:
+      "The currency data visualization dashboard is a tool that helps users stay updated on the latest currency exchange rates and market news. The dashboard displays real-time exchange rates for different currencies, along with historical price data and news updates.",
+    link: "https://ratesreader.brimble.app/",
+    githubIcon: <AiFillGithub />,
+    githubLink: "https://github.com/kodervine/ratesreader",
+    technologiesUsed: ["React", "Tailwind", "Typescript", "Context API"],
+    image1: prytoIpadImg,
+    image2: prytoPhoneImg,
+  },
+  {
     title: "Pryto - live crypto currency converter",
     description:
       "This is a live crypto currency converter to naira. Created a multi-page app that updates select crypto currency price in real time with css3, Tailwind css, and vanilla Javascript. The data is powered by the Coingecko APIs to gain access to the current crypto currencies market values.",
@@ -110,6 +122,17 @@ export const portfolioData: PortfolioInterface[] = [
     githubIcon: <AiFillGithub />,
     githubLink: "https://github.com/kodervine/pryto",
     technologiesUsed: ["Javascript", "Tailwind", "Coingecko API"],
+    image1: prytoIpadImg,
+    image2: prytoPhoneImg,
+  },
+  {
+    title: "Notebox - personal notetaking app",
+    description:
+      "This web app allows users to easily create, manage, and categorize notes with a user-friendly interface, while also offering features like sorting, searching by tags, and responsiveness for both desktop and mobile devices.",
+    link: "https://notebox.brimble.app/",
+    githubIcon: <AiFillGithub />,
+    githubLink: "https://github.com/kodervine/notebox",
+    technologiesUsed: ["Javascript", "Tailwind"],
     image1: prytoIpadImg,
     image2: prytoPhoneImg,
   },
