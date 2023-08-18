@@ -1,7 +1,6 @@
-import React from "react";
 import profileImg from "../assets/profile-pic.jpg";
 import Footer from "../components/Footer";
-import { Anchor, Badge, Grid, Image, Text, Title } from "@mantine/core";
+import { Badge, Grid, Image, Text, Title } from "@mantine/core";
 import HireMe from "../components/HireMe";
 import Navbar from "../components/Navbar";
 
@@ -19,6 +18,7 @@ const techStack = [
   "bootstrap",
   "css",
   "html",
+  "redux",
 ];
 
 const techTools = [
@@ -41,7 +41,6 @@ const Home = () => {
         style={{ padding: "10px 20px" }}
       >
         <Grid.Col md={6} lg={5} order={2} orderSm={2} orderLg={1}>
-          {" "}
           <main>
             <Title order={1} weight={900} my="sm">
               CHINENYE ANIKWENZE
