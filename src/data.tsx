@@ -25,6 +25,7 @@ import courseraMetaIntroToFrontend from "./assets/coursera-reactbasics-meta.jpeg
 import courseraMetaAdvancedReact from "./assets/courseraMetaAdvancedReact.png";
 import techSkillsHackFeature from "./assets/techskills-hack-feature.png";
 import womenDayFeature from "./assets/women Day feature.png";
+import unstyledComponentsFreeCodeCamp from "./assets/freecodecamp-chinenye-unstyledui-components.jpg";
 
 export interface ListItem {
   text: string;
@@ -227,5 +228,16 @@ export const featureData = [
     title: "How I landed my first tech job",
     organisation: "Tech skills hack",
     coverImg: techSkillsHackFeature,
+  },
+];
+
+export const publicationsData = [
+  {
+    dateAdded: "27th August, 2023",
+    link: "https://www.freecodecamp.org/news/unstyled-ui-components-for-front-end-developers/",
+    title:
+      "How to Use Un-Styled UI Components – Guide for Front-End Developers",
+    organisation: "Freecodecamp",
+    coverImg: womenDayFeature,
   },
 ];
