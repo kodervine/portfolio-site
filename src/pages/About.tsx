@@ -28,10 +28,9 @@ const About = (props: Props) => {
             <br />
             <br />
             As a technology lover with an interest in human behavior, my journey
-            to becoming a software developer (frontend)was a natural fit after
-            years of creating highly converting campaigns, aesthetically
-            appealing emails, and ensuring customer retention for my copywriting
-            clients.
+            to becoming a software developer was a natural fit after years of
+            creating highly converting campaigns, aesthetically appealing
+            emails, and ensuring customer retention for my copywriting clients.
             <br />
             <br />
             So, I decided to combine my interests and skills to become a problem
@@ -43,8 +42,9 @@ const About = (props: Props) => {
             <br />
             I am constantly learning new technologies to stay up-to-date with
             industry standards and trends. My tech stack includes HTML, CSS,
-            Tailwind, Sass, JavaScript, and React, and I am familiar with
-            software like Git, GitHub, Netlify, and Firebase.
+            Tailwind, Sass, JavaScript, Typescript, React, React Native and
+            Dart, and I am familiar with software like Git, GitHub, Netlify, and
+            Firebase.
             <br />
             <br /> My <Link to="/portfolio">portfolio webpage</Link> showcases
             my skills and projects, and my{" "}

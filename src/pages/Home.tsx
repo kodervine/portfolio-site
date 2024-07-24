@@ -11,9 +11,11 @@ interface Props {
 
 const techStack = [
   "react",
+  "react native",
   "javascript",
   "typescript",
-  "Scss",
+  "dart",
+  "scss",
   "tailwind",
   "bootstrap",
   "css",
