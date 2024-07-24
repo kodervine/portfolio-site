@@ -15,13 +15,13 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { featureData } from "../data";
 
-type FeatureProps = {
+interface IFeature {
   dateAdded: string;
   link: string;
   title: string;
   organisation: string;
   coverImg: string;
-};
+}
 
 const useStyles = createStyles((theme) => ({
   item: {
@@ -45,10 +45,9 @@ const Features = () => {
       </Title>
 
       <Grid align="center" justify="center">
-        {featureData.slice(0, 6).map((blogs: FeatureProps) => {
+        {featureData.slice(0, 6).map((blogs: IFeature) => {
           const { title, dateAdded, link, organisation, coverImg } = blogs;
-          const numericDate = dateAdded;
-          const date = new Date(numericDate);
+          const date = new Date(dateAdded);
           const options: any = {
             // weekday: "long",
             year: "numeric",
@@ -83,7 +82,7 @@ const Features = () => {
                   <Text weight={400} size="lg">
                     {title}
                   </Text>
-                  <Badge color="red" size="sm" variant="dot" mr="10px">
+                  <Badge color="red" size="sm" variant="dot" mr="10px" mb="sm">
                     {textDate}
                   </Badge>
                 </Flex>

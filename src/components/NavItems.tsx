@@ -27,10 +27,6 @@ const NavItems = ({ handleCloseNav }: any) => {
 
   return (
     <Navbar display="flex" className={classes.nav}>
-      {/* <Flex>
-        <Image src={profileImg} radius={50} width="50px" height="50px" />
-      </Flex> */}
-
       {profileListItems.map((listitems: ListItem) => {
         const { text, link } = listitems;
         return (

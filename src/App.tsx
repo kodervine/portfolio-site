@@ -1,12 +1,10 @@
 import { FC, useState } from "react";
 import Router from "./routes/Route";
-import Navbar from "./components/Navbar";
 import {
   MantineProvider,
   ColorSchemeProvider,
   ColorScheme,
   Box,
-  Tooltip,
 } from "@mantine/core";
 import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
 
@@ -72,7 +70,6 @@ const App: FC<{ opened: boolean }> = ({ opened }) => {
               borderRadius: "5px",
             }}
           >
-            {" "}
             {colorScheme === "dark" ? (
               <BsFillSunFill size={20} />
             ) : (

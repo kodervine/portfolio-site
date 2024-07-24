@@ -14,13 +14,13 @@ import { publicationsData } from "../data";
 import { nanoid } from "nanoid";
 import { useHover } from "@mantine/hooks";
 
-type PublicationsProps = {
+interface IPublications {
   dateAdded: string;
   link: string;
   title: string;
   organisation: string;
   coverImg: string;
-};
+}
 
 const useStyles = createStyles((theme) => ({
   item: {
@@ -42,7 +42,7 @@ const Publications = () => {
         Publications
       </Title>
       <Grid align="center" justify="center">
-        {publicationsData.slice(0, 6).map((article: PublicationsProps) => {
+        {publicationsData.slice(0, 6).map((article: IPublications) => {
           const { title, dateAdded, link, organisation, coverImg } = article;
           return (
             <Grid.Col md={6} lg={3.5} ref={ref} key={nanoid()}>

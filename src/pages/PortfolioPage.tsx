@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { portfolioData, PortfolioInterface } from "../data";
 import {
   Accordion,
@@ -15,8 +14,6 @@ import {
 import { AiOutlinePlus } from "react-icons/ai";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-
-interface PortfolioPageProps {}
 
 interface PortfolioPageClasses {
   root: string;
@@ -73,9 +70,8 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const PortfolioPage: FC<PortfolioPageProps> = () => {
+const PortfolioPage = () => {
   const { classes } = useStyles();
-  console.log(portfolioData);
   return (
     <div style={{ padding: "10px 20px" }}>
       <Navbar title="CHINENYE ANIKWENZE" />

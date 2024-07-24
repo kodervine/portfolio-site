@@ -1,7 +1,5 @@
 import { Title, Badge, Anchor } from "@mantine/core";
 
-type Props = {};
-
 const badgeData = [
   {
     color: "orange",
@@ -20,7 +18,7 @@ const badgeData = [
   },
 ];
 
-const HireMe = (props: Props) => {
+const HireMe = () => {
   return (
     <div>
       <Title order={6} mt={10}>

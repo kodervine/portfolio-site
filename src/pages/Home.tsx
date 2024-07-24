@@ -14,13 +14,16 @@ const techStack = [
   "react native",
   "javascript",
   "typescript",
+  "react query",
   "dart",
+  "flutter",
   "scss",
   "tailwind",
   "bootstrap",
   "css",
   "html",
   "redux",
+  "redux toolkit query",
 ];
 
 const techTools = [
@@ -53,7 +56,7 @@ const Home = () => {
               and ease users' experience.
             </Text>
             <Title order={6} my="sm">
-              Tech Stack:{" "}
+              Technologies:{" "}
             </Title>
             {techStack.map((stack, index) => {
               return (
@@ -92,7 +95,6 @@ const Home = () => {
           </main>
         </Grid.Col>
         <Grid.Col md={6} lg={5} order={1} orderSm={1} orderLg={2}>
-          {" "}
           <Image src={profileImg} radius="lg" />
         </Grid.Col>
       </Grid>

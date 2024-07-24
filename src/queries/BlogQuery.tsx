@@ -24,12 +24,10 @@ const GET_USER_BLOGS = `query Publication {
 }
 `;
 export const fetchBlogs = async () => {
-  let allBlogsFetched = false;
   let page = 10;
   const articles = [];
 
   let response = await gql(GET_USER_BLOGS, { page: page });
-  console.log(response.data.publication.posts.edges);
   articles.push(...response.data.publication.posts.edges);
 
   return articles;

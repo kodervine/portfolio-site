@@ -5,15 +5,12 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import profileImg from "../../public/assets/blue-profile-pic.jpg";
 
-type Props = {};
-
-const About = (props: Props) => {
+const About = () => {
   return (
     <main style={{ padding: "10px 20px" }}>
       <Navbar title="CHINENYE ANIKWENZE" />
       <Grid align="flex-start" justify="center" mt={10}>
         <Grid.Col md={6} lg={5}>
-          {" "}
           <Image src={profileImg} radius="lg" />
         </Grid.Col>
         <Grid.Col md={6} lg={5}>

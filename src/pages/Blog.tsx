@@ -18,7 +18,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 
-type BlogProps = {
+type IBlog = {
   node: {
     title: string;
     brief: string;
@@ -40,7 +40,6 @@ const Blog = () => {
     };
     getBlogs();
   }, []);
-  console.log(blogData);
 
   return (
     <Box px={20}>
@@ -52,9 +51,8 @@ const Blog = () => {
       {blogData.length === 0 ? (
         <Loading />
       ) : (
-        // <Text size={20}>Loading...</Text>
         <Grid align="center" justify="center">
-          {blogData.slice(0, 6).map((blog: BlogProps) => {
+          {blogData.slice(0, 9).map((blog: IBlog) => {
             const {
               title,
               brief,
@@ -62,8 +60,6 @@ const Blog = () => {
               coverImage: { url },
               publishedAt,
             } = blog.node;
-            console.log(blog);
-
             const date = new Date(publishedAt);
             const options: any = {
               // weekday: "long",
@@ -97,7 +93,13 @@ const Blog = () => {
                     <Text weight={500} size="lg" my="md">
                       {title}
                     </Text>
-                    <Badge color="yellow" size="sm" variant="dot" mr="10px">
+                    <Badge
+                      color="yellow"
+                      size="sm"
+                      variant="dot"
+                      mr="10px"
+                      mb="sm"
+                    >
                       {textDate}
                     </Badge>
 

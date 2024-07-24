@@ -1,7 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { Button, Box, Collapse, Flex, Text } from "@mantine/core";
-import { AiOutlineMenuFold, AiOutlineCloseCircle } from "react-icons/ai";
+import { Box, Collapse, Flex, Text } from "@mantine/core";
+import { AiOutlineMenuFold } from "react-icons/ai";
 import NavItems from "./NavItems";
 
 const Navbar = (props: any) => {

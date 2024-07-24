@@ -1,14 +1,4 @@
-import {
-  Accordion,
-  Anchor,
-  Badge,
-  Box,
-  createStyles,
-  Flex,
-  keyframes,
-  Text,
-  Title,
-} from "@mantine/core";
+import { Box, createStyles, keyframes } from "@mantine/core";
 
 const ring = keyframes({
   "0%": {
@@ -57,8 +47,8 @@ const useStyles = createStyles((theme) => ({
 
   ring: {
     position: "absolute",
-    width: "200px",
-    height: "200px",
+    width: "100px",
+    height: "100px",
     borderRadius: "50%",
     animation: `${ring} 2s linear infinite`,
 
@@ -79,18 +69,16 @@ const useStyles = createStyles((theme) => ({
   },
   span: {
     color: "#737373",
-    fontSize: "20px",
+    fontSize: "14px",
     textTransform: "uppercase",
     letterSpacing: "1px",
-    lineHeight: "200px",
+    lineHeight: "100px",
     animation:
       theme.colorScheme === "dark"
         ? `${darktext} 3s ease-in-out infinite`
         : `${text} 3s ease-in-out infinite`,
   },
 }));
-
-type Props = {};
 
 const Loading = () => {
   const { classes } = useStyles();

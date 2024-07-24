@@ -8,7 +8,7 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { AiOutlinePlus, AiFillCaretDown } from "react-icons/ai";
+import { AiFillCaretDown } from "react-icons/ai";
 import { certificationsData } from "../data";
 import { nanoid } from "nanoid";
 import Footer from "../components/Footer";
@@ -58,8 +58,6 @@ const useStyles = createStyles((theme) => ({
     height: "100px",
   },
 }));
-
-type Props = {};
 
 const Certifications = () => {
   const { classes } = useStyles();

@@ -1,6 +1,5 @@
 import {
   createStyles,
-  Container,
   Group,
   Box,
   ActionIcon,
