@@ -23,6 +23,7 @@ type IBlog = {
     title: string;
     brief: string;
     slug: string;
+    url: string;
     coverImage: {
       url: string;
     };
@@ -57,6 +58,7 @@ const Blog = () => {
               title,
               brief,
               slug,
+              url: blogUrl,
               coverImage: { url },
               publishedAt,
             } = blog.node;
@@ -67,6 +69,7 @@ const Blog = () => {
               month: "long",
               day: "numeric",
             };
+            console.log(slug, blog);
             const textDate = date.toLocaleDateString("en-UK", options);
 
             return (
@@ -105,10 +108,7 @@ const Blog = () => {
 
                     <Text mt="xs" color="dimmed" size="sm">
                       {brief}{" "}
-                      <a
-                        href={`https://kodervine.hashnode.dev/${slug}`}
-                        target="_blank"
-                      >
+                      <a href={blogUrl} target="_blank">
                         Read more
                       </a>
                     </Text>
