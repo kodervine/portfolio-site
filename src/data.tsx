@@ -19,13 +19,16 @@ import noteBoxPhoneImg from "./assets/noteboxMobile.png";
 import noteBoxDesktopImg from "./assets/noteboxDesktop.png";
 import ratesReaderDesktopImg from "./assets/ratesReaderDesktop.png";
 import ratesReaderPhoneImg from "./assets/ratesReaderMobile.png";
+import lifelaneDesktopImg from "./assets/lifelanenetworkdesktop.png";
+import lifelanePhoneImg from "./assets/lifelanenetworkmobile.png";
 import udemyJavascriptCert from "./assets/udemy-javascript-course.jpg";
+import udemyFlutterCert from "./assets/udemy-flutter-certificate.jpg";
 import courseraMetaReactBasics from "./assets/coursera-introduction-to-frontend.jpeg";
 import courseraMetaIntroToFrontend from "./assets/coursera-reactbasics-meta.jpeg";
 import courseraMetaAdvancedReact from "./assets/courseraMetaAdvancedReact.png";
 import techSkillsHackFeature from "./assets/techskills-hack-feature.png";
 import womenDayFeature from "./assets/women Day feature.png";
-import unstyledComponentsFreeCodeCamp from "./assets/freecodecamp-chinenye-unstyledui-components.jpg";
+import freecodecampPublication from "./assets/freecodecamp-unstyleduicomponents.png";
 
 export interface ListItem {
   text: string;
@@ -109,6 +112,16 @@ export const portfolioData: PortfolioInterface[] = [
     image2: ceenditPhoneImg,
   },
   {
+    title: "Lifelane Films Network",
+    description: "Creating health instructional films, one story at a time.",
+    link: "https://lifelanefilmsnetwork.com/",
+    githubIcon: <AiFillGithub />,
+    githubLink: "https://github.com/kodervine",
+    technologiesUsed: ["React", "Javascript", "Framer Motion"],
+    image1: lifelaneDesktopImg,
+    image2: lifelanePhoneImg,
+  },
+  {
     title: "Ratesreader - News update and Data visualization dashboard",
     description:
       "The currency data visualization dashboard is a tool that helps users stay updated on the latest currency exchange rates and market news. The dashboard displays real-time exchange rates for different currencies, along with historical price data and news updates.",
@@ -166,6 +179,20 @@ export const portfolioData: PortfolioInterface[] = [
 ];
 
 export const certificationsData = [
+  {
+    year: "2024",
+    certifications: [
+      {
+        date: "May, 2024",
+        link: "https://www.udemy.com/certificate/UC-e76870f4-dd35-483b-b990-54d136bd97ae/",
+        image: udemyFlutterCert,
+        organisation: "Udemy",
+        title: "Flutter & Dart - The Complete Guide [2024 Edition]",
+        description:
+          "A Complete Guide to the Flutter SDK &amp; Flutter Framework for building native iOS and Android apps",
+      },
+    ],
+  },
   {
     year: "2023",
     certifications: [
@@ -238,6 +265,6 @@ export const publicationsData = [
     title:
       "How to Use Un-Styled UI Components – Guide for Front-End Developers",
     organisation: "Freecodecamp",
-    coverImg: womenDayFeature,
+    coverImg: freecodecampPublication,
   },
 ];

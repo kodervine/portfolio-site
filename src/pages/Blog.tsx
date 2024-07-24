@@ -19,11 +19,15 @@ import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 
 type BlogProps = {
-  title: string;
-  brief: string;
-  slug: string;
-  coverImage: string;
-  dateAdded: number;
+  node: {
+    title: string;
+    brief: string;
+    slug: string;
+    coverImage: {
+      url: string;
+    };
+    publishedAt: number;
+  };
 };
 
 const Blog = () => {
@@ -36,6 +40,7 @@ const Blog = () => {
     };
     getBlogs();
   }, []);
+  console.log(blogData);
 
   return (
     <Box px={20}>
@@ -49,10 +54,17 @@ const Blog = () => {
       ) : (
         // <Text size={20}>Loading...</Text>
         <Grid align="center" justify="center">
-          {blogData.slice(0, 6).map((blogs: BlogProps) => {
-            const { title, brief, slug, coverImage, dateAdded } = blogs;
-            const numericDate = dateAdded;
-            const date = new Date(numericDate);
+          {blogData.slice(0, 6).map((blog: BlogProps) => {
+            const {
+              title,
+              brief,
+              slug,
+              coverImage: { url },
+              publishedAt,
+            } = blog.node;
+            console.log(blog);
+
+            const date = new Date(publishedAt);
             const options: any = {
               // weekday: "long",
               year: "numeric",
@@ -75,7 +87,7 @@ const Blog = () => {
                 >
                   <Card.Section>
                     <Image
-                      src={coverImage}
+                      src={url}
                       height={200}
                       alt="course certification images"
                     />
