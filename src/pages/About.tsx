@@ -3,7 +3,7 @@ import { Image, Text, Title, Grid } from "@mantine/core";
 import HireMe from "../components/HireMe";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import profileImg from "../assets/blue-profile-pic.jpg";
+import profileImg from "../../public/assets/blue-profile-pic.jpg";
 
 type Props = {};
 

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { Navbar, Text, Anchor, createStyles, Box } from "@mantine/core";
-import profileImg from "../assets/profile-pic.jpg";
+import { Navbar, Text, createStyles, Box } from "@mantine/core";
 import { nanoid } from "nanoid";
 import { ListItem, profileListItems } from "../data";
 import Footer from "./Footer";

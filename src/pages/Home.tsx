@@ -1,4 +1,4 @@
-import profileImg from "../assets/profile-pic.jpg";
+import profileImg from "../../public/assets/profile-pic.jpg";
 import Footer from "../components/Footer";
 import { Badge, Grid, Image, Text, Title } from "@mantine/core";
 import HireMe from "../components/HireMe";
