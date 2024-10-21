@@ -94,7 +94,6 @@ const PortfolioPage = () => {
         defaultValue={portfolioData[0].title}
       >
         {portfolioData.map((item: PortfolioInterface) => {
-          console.log(item.githubLink, item.link);
           return (
             <Accordion.Item value={item.title} key={item.title}>
               <Accordion.Control style={{ fontSize: "16px" }}>
@@ -134,21 +133,24 @@ const PortfolioPage = () => {
                     <Flex />
                     <Text>{item.description}</Text>
                     <Group my={3} spacing="xl">
-                      {item.githubLink &&  <Anchor
-                        href={item.githubLink}
-                        target="_blank"
-                        className={classes.link}
-                      >
-                        Github link
-                      </Anchor>}
-                     {item.link &&<Anchor
-                        href={item.link}
-                        target="_blank"
-                        className={classes.link}
-                      >
-                        Live Link
-                      </Anchor> }
-                      
+                      {item.githubLink && (
+                        <Anchor
+                          href={item.githubLink}
+                          target="_blank"
+                          className={classes.link}
+                        >
+                          Github link
+                        </Anchor>
+                      )}
+                      {item.link && (
+                        <Anchor
+                          href={item.link}
+                          target="_blank"
+                          className={classes.link}
+                        >
+                          Live Link
+                        </Anchor>
+                      )}
                     </Group>
                     <Box>
                       <Text weight="bold" mt={2}>

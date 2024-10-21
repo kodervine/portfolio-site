@@ -103,7 +103,7 @@ export interface PortfolioInterface {
 
 export const portfolioData: PortfolioInterface[] = [
   {
-    title: "Health Viz",
+    title: "Healthviz",
     description:
       "A health management tool featuring a customizable reminder system, pain level logger, and habit tracker. Users can easily set reminders for daily, or custom schedules, log their pain levels and habits, and track progress with built-in analytics.",
     link: "",
