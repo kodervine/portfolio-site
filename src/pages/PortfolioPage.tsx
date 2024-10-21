@@ -7,6 +7,7 @@ import {
   createStyles,
   Flex,
   Grid,
+  Group,
   Image,
   Text,
   Title,
@@ -92,73 +93,88 @@ const PortfolioPage = () => {
         className={classes.root}
         defaultValue={portfolioData[0].title}
       >
-        {portfolioData.map((item: PortfolioInterface) => (
-          <Accordion.Item value={item.title} key={item.title}>
-            <Accordion.Control style={{ fontSize: "16px" }}>
-              {item.title}
-            </Accordion.Control>
-            <Accordion.Panel>
-              <Grid justify="flex-start" align="center">
-                <Grid.Col md={6} lg={5}>
-                  <a href={item.link} target="_blank" rel="noopener noreferrer">
-                    {/* Image grid */}
-                    <Grid>
-                      <Grid.Col md={6} lg={5}>
-                        <Image
-                          src={item.image1}
-                          width={innerWidth < 700 ? 300 : 387}
-                          height={290}
-                          fit="contain"
-                        />
-                      </Grid.Col>
-                      <Grid.Col md={6} lg={2}>
-                        <Image
-                          src={item.image2}
-                          width={innerWidth < 700 ? 300 : 387}
-                          height={290}
-                          className={classes.imageClass}
-                          fit="contain"
-                        />
-                      </Grid.Col>
-                    </Grid>
-                  </a>
-                </Grid.Col>
-                <Grid.Col md={6} lg={5}>
-                  <Flex />
-                  <Text>{item.description}</Text>
-                  <Box my={3}>
-                    <Anchor
+        {portfolioData.map((item: PortfolioInterface) => {
+          console.log(item.githubLink, item.link);
+          return (
+            <Accordion.Item value={item.title} key={item.title}>
+              <Accordion.Control style={{ fontSize: "16px" }}>
+                {item.title}
+              </Accordion.Control>
+              <Accordion.Panel>
+                <Grid justify="flex-start" align="center">
+                  <Grid.Col md={6} lg={5}>
+                    <a
                       href={item.githubLink}
                       target="_blank"
-                      className={classes.link}
+                      rel="noopener noreferrer"
                     >
-                      More details
-                    </Anchor>
-                  </Box>
-                  <Box>
-                    <Text weight="bold" mt={2}>
-                      Technologies used:
-                    </Text>
+                      {/* Image grid */}
+                      <Grid gutter="xl">
+                        <Grid.Col md={6} lg={5}>
+                          <Image
+                            src={item.image1}
+                            width={innerWidth < 700 ? 300 : 387}
+                            height={290}
+                            fit="contain"
+                          />
+                        </Grid.Col>
+                        <Grid.Col md={6} lg={2}>
+                          <Image
+                            src={item.image2}
+                            width={innerWidth < 700 ? 300 : 387}
+                            height={290}
+                            className={classes.imageClass}
+                            fit="contain"
+                          />
+                        </Grid.Col>
+                      </Grid>
+                    </a>
+                  </Grid.Col>
+                  <Grid.Col md={6} lg={5}>
+                    <Flex />
+                    <Text>{item.description}</Text>
+                    <Group my={3} spacing="xl">
+                      {item.githubLink &&  <Anchor
+                        href={item.githubLink}
+                        target="_blank"
+                        className={classes.link}
+                      >
+                        Github link
+                      </Anchor>}
+                     {item.link &&<Anchor
+                        href={item.link}
+                        target="_blank"
+                        className={classes.link}
+                      >
+                        Live Link
+                      </Anchor> }
+                      
+                    </Group>
+                    <Box>
+                      <Text weight="bold" mt={2}>
+                        Technologies used:
+                      </Text>
 
-                    {item.technologiesUsed.map((btn, index) => {
-                      return (
-                        <Badge
-                          color="orange"
-                          size="sm"
-                          variant="dot"
-                          key={index}
-                          mr="10px"
-                        >
-                          {btn}
-                        </Badge>
-                      );
-                    })}
-                  </Box>
-                </Grid.Col>
-              </Grid>
-            </Accordion.Panel>
-          </Accordion.Item>
-        ))}
+                      {item.technologiesUsed.map((btn, index) => {
+                        return (
+                          <Badge
+                            color="orange"
+                            size="sm"
+                            variant="dot"
+                            key={index}
+                            mr="10px"
+                          >
+                            {btn}
+                          </Badge>
+                        );
+                      })}
+                    </Box>
+                  </Grid.Col>
+                </Grid>
+              </Accordion.Panel>
+            </Accordion.Item>
+          );
+        })}
       </Accordion>
       <Footer />
     </div>

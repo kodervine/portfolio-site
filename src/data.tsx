@@ -21,6 +21,8 @@ import ratesReaderDesktopImg from "../public/assets/ratesReaderDesktop.png";
 import ratesReaderPhoneImg from "../public/assets/ratesReaderMobile.png";
 import lifelaneDesktopImg from "../public/assets/lifelanenetworkdesktop.png";
 import lifelanePhoneImg from "../public/assets/lifelanenetworkmobile.png";
+import healthVizReminderAndLogs from "../public/assets/healthviz-reminder-log.jpg";
+import healthVizHome from "../public/assets/healthviz-home.png";
 import udemyJavascriptCert from "../public/assets/udemy-javascript-course.jpg";
 import udemyFlutterCert from "../public/assets/udemy-flutter-certificate.jpg";
 import courseraMetaReactBasics from "../public/assets/coursera-introduction-to-frontend.jpeg";
@@ -101,6 +103,17 @@ export interface PortfolioInterface {
 
 export const portfolioData: PortfolioInterface[] = [
   {
+    title: "Health Viz",
+    description:
+      "A health management tool featuring a customizable reminder system, pain level logger, and habit tracker. Users can easily set reminders for daily, or custom schedules, log their pain levels and habits, and track progress with built-in analytics.",
+    link: "",
+    githubIcon: <AiFillGithub />,
+    githubLink: "https://github.com/kodervine/healthviz",
+    technologiesUsed: ["Flutter", "Dart"],
+    image1: healthVizReminderAndLogs,
+    image2: healthVizHome,
+  },
+  {
     title: "Ceendit -  an invoice generator",
     description:
       "Say goodbye to manual invoicing and hello to effortless payment processing. Create professional invoices in pdf format for your clients in less than a minute",
@@ -116,7 +129,7 @@ export const portfolioData: PortfolioInterface[] = [
     description: "Creating health instructional films, one story at a time.",
     link: "https://lifelanefilmsnetwork.com/",
     githubIcon: <AiFillGithub />,
-    githubLink: "https://github.com/kodervine",
+    githubLink: "",
     technologiesUsed: ["React", "Javascript", "Framer Motion"],
     image1: lifelaneDesktopImg,
     image2: lifelanePhoneImg,
