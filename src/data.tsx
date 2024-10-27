@@ -23,6 +23,8 @@ import lifelaneDesktopImg from "../public/assets/lifelanenetworkdesktop.png";
 import lifelanePhoneImg from "../public/assets/lifelanenetworkmobile.png";
 import healthVizReminderAndLogs from "../public/assets/healthviz-reminder-log.jpg";
 import healthVizHome from "../public/assets/healthviz-home.png";
+import glowdropMix from "../public/assets/glowdropMix.jpg";
+import glowdropHome from "../public/assets/glowdropHome.png";
 import udemyJavascriptCert from "../public/assets/udemy-javascript-course.jpg";
 import udemyFlutterCert from "../public/assets/udemy-flutter-certificate.jpg";
 import courseraMetaReactBasics from "../public/assets/coursera-introduction-to-frontend.jpeg";
@@ -103,7 +105,7 @@ export interface PortfolioInterface {
 
 export const portfolioData: PortfolioInterface[] = [
   {
-    title: "Healthviz",
+    title: "Healthviz - health management tool",
     description:
       "A health management tool featuring a customizable reminder system, pain level logger, and habit tracker. Users can easily set reminders for daily, or custom schedules, log their pain levels and habits, and track progress with built-in analytics.",
     link: "",
@@ -112,6 +114,17 @@ export const portfolioData: PortfolioInterface[] = [
     technologiesUsed: ["Flutter", "Dart"],
     image1: healthVizReminderAndLogs,
     image2: healthVizHome,
+  },
+  {
+    title: "Glowdrop - beauty service and product app",
+    description:
+      "Glowdrop is your one-stop beauty service and product app, built to provide a streamlined experience in booking services, discovering products, and maintaining a beauty routine",
+    link: "",
+    githubIcon: <AiFillGithub />,
+    githubLink: "https://github.com/kodervine/glowdrop",
+    technologiesUsed: ["Reactnative", "Typescript"],
+    image1: glowdropMix,
+    image2: glowdropHome,
   },
   {
     title: "Ceendit -  an invoice generator",
