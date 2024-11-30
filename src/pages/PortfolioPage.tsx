@@ -77,7 +77,7 @@ const PortfolioPage = () => {
     <div style={{ padding: "10px 20px" }}>
       <Navbar title="CHINENYE ANIKWENZE" />
       <Title order={4} pb={10} mt="md">
-        Projects
+        Works
       </Title>
       <Accordion
         chevron={<AiOutlinePlus size={16} />}
@@ -94,6 +94,7 @@ const PortfolioPage = () => {
         defaultValue={portfolioData[0].title}
       >
         {portfolioData.map((item: PortfolioInterface) => {
+          console.log(item.link);
           return (
             <Accordion.Item value={item.title} key={item.title}>
               <Accordion.Control style={{ fontSize: "16px" }}>
@@ -148,7 +149,8 @@ const PortfolioPage = () => {
                           target="_blank"
                           className={classes.link}
                         >
-                          Live Link
+                          {item.link}
+                          {/* Link */}
                         </Anchor>
                       )}
                     </Group>

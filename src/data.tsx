@@ -25,6 +25,10 @@ import healthVizReminderAndLogs from "../public/assets/healthviz-reminder-log.jp
 import healthVizHome from "../public/assets/healthviz-home.png";
 import glowdropMix from "../public/assets/glowdropMix.jpg";
 import glowdropHome from "../public/assets/glowdropHome.png";
+import homnicsDesktop from "../public/assets/homnics-desktop.png";
+import homnicsMobile from "../public/assets/homnics-mobile.png";
+import balanceeDesktop from "../public/assets/balancee-desktop.png";
+import balanceeMobile from "../public/assets/balancee-desktop.png";
 import udemyJavascriptCert from "../public/assets/udemy-javascript-course.jpg";
 import udemyFlutterCert from "../public/assets/udemy-flutter-certificate.jpg";
 import courseraMetaReactBasics from "../public/assets/coursera-introduction-to-frontend.jpeg";
@@ -105,7 +109,29 @@ export interface PortfolioInterface {
 
 export const portfolioData: PortfolioInterface[] = [
   {
-    title: "Healthviz - health management tool",
+    title: "Homnics",
+    description:
+      "A telemedicine platform that allows patients to connect with medical professionals, book appointments, get prescriptions, share records.",
+    link: "https://portal.homnics.com/register",
+    githubIcon: <AiFillGithub />,
+    githubLink: "",
+    technologiesUsed: ["Typescript", "React", "Mantine UI"],
+    image1: homnicsDesktop,
+    image2: homnicsMobile,
+  },
+  {
+    title: "Balanceè",
+    description:
+      "A platform connects repair stations with customers, providing reliable solutions for automotive needs.",
+    link: "https://www.customer.balancee.app/",
+    githubIcon: <AiFillGithub />,
+    githubLink: "",
+    technologiesUsed: ["Flutter", "Dart", "Javascript", "React"],
+    image1: balanceeDesktop,
+    image2: balanceeMobile,
+  },
+  {
+    title: "Healthviz - Health management tool",
     description:
       "A health management tool featuring a customizable reminder system, pain level logger, and habit tracker. Users can easily set reminders for daily, or custom schedules, log their pain levels and habits, and track progress with built-in analytics.",
     link: "",
@@ -116,18 +142,18 @@ export const portfolioData: PortfolioInterface[] = [
     image2: healthVizHome,
   },
   {
-    title: "Glowdrop - beauty service and product app",
+    title: "Glowdrop - Beauty service and product app",
     description:
       "Glowdrop is your one-stop beauty service and product app, built to provide a streamlined experience in booking services, discovering products, and maintaining a beauty routine",
     link: "",
     githubIcon: <AiFillGithub />,
     githubLink: "https://github.com/kodervine/glowdrop",
-    technologiesUsed: ["Reactnative", "Typescript"],
+    technologiesUsed: ["React native", "Typescript"],
     image1: glowdropMix,
     image2: glowdropHome,
   },
   {
-    title: "Ceendit -  an invoice generator",
+    title: "Ceendit - an invoice generator",
     description:
       "Say goodbye to manual invoicing and hello to effortless payment processing. Create professional invoices in pdf format for your clients in less than a minute",
     link: "https://ceendit.netlify.app",
@@ -159,7 +185,7 @@ export const portfolioData: PortfolioInterface[] = [
     image2: ratesReaderPhoneImg,
   },
   {
-    title: "Pryto - live crypto currency converter",
+    title: "Pryto - Live crypto currency converter",
     description:
       "This is a live crypto currency converter to naira. Created a multi-page app that updates select crypto currency price in real time with css3, Tailwind css, and vanilla Javascript. The data is powered by the Coingecko APIs to gain access to the current crypto currencies market values.",
     link: "https://kodervine.github.io/pryto/",
@@ -170,7 +196,7 @@ export const portfolioData: PortfolioInterface[] = [
     image2: prytoPhoneImg,
   },
   {
-    title: "Notebox - personal notetaking application",
+    title: "Notebox - Personal notetaking application",
     description:
       "This web app allows users to easily create, manage, and categorize notes with a user-friendly interface, while also offering features like sorting, searching by tags, and responsiveness for both desktop and mobile devices.",
     link: "https://notebox.brimble.app/",
@@ -181,7 +207,7 @@ export const portfolioData: PortfolioInterface[] = [
     image2: noteBoxPhoneImg,
   },
   {
-    title: "Kadd - customizable business card creator",
+    title: "Kadd - Customizable business card creator",
     description:
       "This is a customizable business card creator. Created with HTML, CSS, and Javascript.  Create a customizable business card in just a few clicks. Can change to the theme color of your choice, and save to a png file in seconds.",
     link: "https://kadd.netlify.app/",
@@ -192,7 +218,7 @@ export const portfolioData: PortfolioInterface[] = [
     image2: kaddIpadImg,
   },
   {
-    title: "My Tasks - daily schedule tools",
+    title: "My Tasks - Daily schedule tools",
     description:
       "This is a simple daily schedule programme. Created with HTML, Tailwind CSS, and Javascript.Have an organised day by creating simple daily-task reminders. Made with User friendly interface and easy navigation in mind.",
     link: "https://my-dailytask.netlify.app/",

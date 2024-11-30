@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Publications from "../pages/Publications";
 import Loading from "../components/Loading";
 import { Suspense, lazy } from "react";
@@ -21,6 +21,7 @@ export default () => {
         <Route path="/certifications" element={<Certifications />} />
         <Route path="/publications" element={<Publications />} />
         <Route path="/features" element={<Features />} />
+        <Route path="/*" element={<Navigate to="/" />} />
       </Routes>
     </Suspense>
   );
