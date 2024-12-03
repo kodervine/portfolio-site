@@ -28,7 +28,7 @@ import glowdropHome from "../public/assets/glowdropHome.png";
 import homnicsDesktop from "../public/assets/homnics-desktop.png";
 import homnicsMobile from "../public/assets/homnics-mobile.png";
 import balanceeDesktop from "../public/assets/balancee-desktop.png";
-import balanceeMobile from "../public/assets/balancee-desktop.png";
+import balanceeMobile from "../public/assets/balancee-mobile.png";
 import udemyJavascriptCert from "../public/assets/udemy-javascript-course.jpg";
 import udemyFlutterCert from "../public/assets/udemy-flutter-certificate.jpg";
 import courseraMetaReactBasics from "../public/assets/coursera-introduction-to-frontend.jpeg";
