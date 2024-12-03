@@ -24,7 +24,7 @@ const About = () => {
             problems for customers and ensuring a smooth User Experience.
             <br />
             <br />
-            As a technology lover with an interest in human behavior, my journey
+            {/* As a technology lover with an interest in human behavior, my journey
             to becoming a software developer was a natural fit after years of
             creating highly converting campaigns, aesthetically appealing
             emails, and ensuring customer retention for my copywriting clients.
@@ -36,19 +36,19 @@ const About = () => {
             intersection of left and right brain hemispheres, enabling me to
             maximize both aspects of her creativity.
             <br />
-            <br />
+            <br /> */}
             I am constantly learning new technologies to stay up-to-date with
             industry standards and trends. My tech stack includes HTML, CSS,
             Tailwind, Sass, JavaScript, Typescript, React, React Native and
-            Dart, and I am familiar with software like Git, GitHub, Netlify, and
-            Firebase.
+            Dart, and I utilize software like Git, GitHub, Netlify, and Firebase
+            in my projects.
             <br />
             <br /> My <Link to="/portfolio">portfolio webpage</Link> showcases
             my skills and projects, and my{" "}
             <a href="https://github.com/kodervine">GitHub profile </a>{" "}
-            highlights my activity in the open-source community. Also, I have a
-            blog on hashnode where I create articles on technologies I have used
-            and my debugging in frontend development. You can{" "}
+            highlights my programming activities. Also, I have a blog on
+            hashnode where I create articles on technologies I have used and my
+            debugging in frontend development. You can{" "}
             <a href="https://kodervine.hashnode.dev/">read my articles here.</a>
             <br />
             <br />
